@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#121411"/>
+  <circle cx="256" cy="256" r="187" fill="none" stroke="#baff00" stroke-width="22"/>
+  <path d="M112 309h48l24-107h40l-19 72h51l45-72h48l-64 96 51 88h-51l-35-64h-70l-16 64h-52z" fill="#baff00"/>
+  <text x="256" y="442" fill="#fff" font-family="Arial, sans-serif" font-size="45" font-weight="800" text-anchor="middle">FITNESS</text>
+</svg>
