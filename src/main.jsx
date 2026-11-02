@@ -3,9 +3,9 @@ import{createRoot}from'react-dom/client';import'./styles.css';
 import{createClient}from'@supabase/supabase-js';
 
 const supabase=createClient(import.meta.env.VITE_SUPABASE_URL,import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
-const KEY='rk-fitness-v4',ROUTE_KEY='rk-fitness-route',SESSION_KEY='rk-fitness-active-session',XP_RULES={workout:50,exercise:10,dailyQuest:20,streakDay:5},today=()=>new Date().toISOString().slice(0,10);
+const ACTIVE_USER_KEY='rk-fitness-active-user',KEY=`rk-fitness-v5:${localStorage.getItem(ACTIVE_USER_KEY)||'guest'}`,ROUTE_KEY='rk-fitness-route',SESSION_KEY='rk-fitness-active-session',XP_RULES={workout:50,exercise:10,dailyQuest:20,streakDay:5},today=()=>new Date().toISOString().slice(0,10);
 const pic={hero:'https://images.unsplash.com/photo-1581009146145-b5ef050c3a48?auto=format&fit=crop&w=1200&q=85',gym:'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=80',food:'https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=900&q=80'};
-const seed=[['squat','Bodyweight Squat','Legs','Bodyweight',4,12],['push','Push-up','Chest','Bodyweight',3,12],['row','Seated Cable Row','Back','Cable machine',4,10],['plank','Plank','Abs','Bodyweight',3,30],['incline','Incline Bench Press','Chest','Dumbbells',4,8],['fly','Bench Fly','Chest','Dumbbells',3,12],['pullup','Pull-up','Back','Bodyweight',3,6],['deadlift','Romanian Deadlift','Legs','Barbell',4,8]];
+const seed=[['squat','Bodyweight Squat','Legs','Bodyweight',4,12],['push','Push-up','Chest','Bodyweight',3,12],['row','Seated Cable Row','Back','Cable machine',4,10],['plank','Plank','Abs','Bodyweight',3,30],['incline','Incline Bench Press','Chest','Dumbbells',4,8],['fly','Bench Fly','Chest','Dumbbells',3,12],['pullup','Pull-up','Back','Bodyweight',3,6],['deadlift','Romanian Deadlift','Legs','Barbell',4,8],['run2k','2 km Run','Cardio','Bodyweight',1,1]];
 const extra={Chest:['Flat Bench Press','Dumbbell Press','Cable Fly','Chest Press','Diamond Push-up','Wide Push-up','Decline Push-up','Pec Deck','Low Cable Fly','Floor Press','Squeeze Press','Medicine Ball Push-up','Single-arm Press','Cable Crossover'],Back:['Lat Pulldown','Barbell Row','One-arm Row','Face Pull','Reverse Fly','Superman','T-Bar Row','Straight-arm Pulldown','Inverted Row','Good Morning','Rack Pull','Meadows Row','Band Pull-apart','Chest-supported Row'],Legs:['Goblet Squat','Reverse Lunge','Walking Lunge','Glute Bridge','Hip Thrust','Calf Raise','Leg Press','Leg Extension','Hamstring Curl','Step-up','Bulgarian Split Squat','Sumo Squat','Wall Sit','Jump Squat'],Arms:['Bicep Curl','Hammer Curl','Tricep Dip','Tricep Pushdown','Overhead Extension','Close-grip Press','Concentration Curl','Cable Curl','Skull Crusher','Preacher Curl','Bench Dip','Zottman Curl','Kickback','Reverse Curl'],Shoulders:['Overhead Press','Lateral Raise','Front Raise','Rear Delt Fly','Upright Row','Shrug','Pike Push-up','Landmine Press','Arnold Press','Band Raise','Plate Raise','Cuban Press'],Abs:['Crunch','Leg Raise','Dead Bug','Russian Twist','Mountain Climber','Bicycle Crunch','Side Plank','Hollow Hold','Bird Dog','Toe Touch','Flutter Kick','Cable Crunch','V-up','Heel Tap'],Cardio:['Jumping Jack','High Knees','Burpee','Skater Hop','Butt Kick','Bear Crawl','Shadow Boxing','Box Step','Fast Feet','Jump Rope','Sprint Interval','Rowing Sprint']};
 const image={Chest:pic.gym,Back:pic.hero,Legs:'https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=800&q=80',Arms:pic.gym,Shoulders:pic.gym,Abs:'https://images.unsplash.com/photo-1609899537878-88d5ba429bdb?auto=format&fit=crop&w=800&q=80',Cardio:pic.hero};
 const exercises=[...seed,...Object.entries(extra).flatMap(([muscle,a])=>a.map((name,i)=>[`${muscle}-${i}`.toLowerCase(),name,muscle,i%3?'Dumbbells':'Bodyweight',muscle==='Abs'?3:3,muscle==='Abs'?30:10]))].map(([id,name,muscle,equipment,sets,reps])=>({id,name,muscle,equipment,sets,reps,image:image[muscle]}));
@@ -13,9 +13,35 @@ const get=id=>exercises.find(x=>x.id===id);
 // Add only verified, exercise-specific, licensed MP4 URLs here. Keeping this empty is intentional:
 // RK FITNESS must never present an unrelated stock clip as a movement demonstration.
 const exerciseMedia={};
-const defaultPlans=[{id:'daily',name:'Daily Starter',area:'Daily',ids:['squat','push','plank']},{id:'full',name:'Full Body Workout',area:'Full Body',ids:['squat','push','row','plank']},{id:'chest',name:'Chest Workout',area:'Chest',ids:['incline','fly','push']},{id:'back',name:'Back Workout',area:'Back',ids:['row','pullup','plank']},{id:'legs',name:'Leg Workout',area:'Legs',ids:['squat','deadlift','plank']}];
+const defaultPlans=[{id:'daily',name:'Daily Starter',area:'Daily',ids:['squat','push','plank','pullup','run2k']},{id:'full',name:'Full Body Workout',area:'Full Body',ids:['squat','push','row','plank']},{id:'chest',name:'Chest Workout',area:'Chest',ids:['incline','fly','push']},{id:'back',name:'Back Workout',area:'Back',ids:['row','pullup','plank']},{id:'legs',name:'Leg Workout',area:'Legs',ids:['squat','deadlift','plank']},{id:'arms',name:'Arms Workout',area:'Arms',ids:['arms-0','arms-1','arms-2']}];
 const base={onboarded:false,user:{name:'RK Athlete',email:'',goal:'Keep Fit',level:'Beginner',focus:['Chest'],equipment:['Bodyweight','Dumbbells'],weight:60,target:65},workouts:[],foods:[],custom:[],planOverrides:{},hiddenPlans:[]};
-const load=()=>{try{let x=JSON.parse(localStorage.getItem(KEY))||{},workouts=(x.workouts||[]).map(w=>w.session?{id:w.id||crypto.randomUUID(),name:w.name||'Completed Workout',day:(w.date||today()).slice(0,10),date:w.date||new Date().toISOString(),duration:w.duration||1,sets:w.session.sets?.reduce((n,s)=>n+s.rows.filter(r=>r.done).length,0)||0}:w),foods=(x.foods||[]).map(f=>({...f,day:f.day||f.date||today()}));Object.entries(x.planOverrides||{}).forEach(([id,override])=>{let p=defaultPlans.find(plan=>plan.id===id);if(p)Object.assign(p,override)});return{...base,...x,workouts,foods,user:{...base.user,...x.user}}}catch{return base}};
+const storageKey=userId=>userId?`${KEY}:${userId}`:KEY;
+const normalise=x=>{try{let workouts=(x.workouts||[]).map(w=>w.session?{id:w.id||crypto.randomUUID(),name:w.name||'Completed Workout',day:(w.date||today()).slice(0,10),date:w.date||new Date().toISOString(),duration:w.duration||1,sets:w.session.sets?.reduce((n,s)=>n+s.rows.filter(r=>r.done).length,0)||0}:w).map(w=>({...w,xp:XP_RULES.workout+Math.max(0,Number(w.exerciseCount)||0)*XP_RULES.exercise+(w.isDaily?XP_RULES.dailyQuest:0)})),foods=(x.foods||[]).map(f=>({...f,day:f.day||f.date||today()}));return{...base,...x,workouts,foods,user:{...base.user,...x.user}}}catch{return base}};
+const load=userId=>normalise(JSON.parse(localStorage.getItem(storageKey(userId))||localStorage.getItem(KEY)||localStorage.getItem('rk-fitness-v4')||'{}'));
+// Save state per signed-in user. The table is protected by the migration's owner-only RLS policies.
+const bootUserId=localStorage.getItem(ACTIVE_USER_KEY)||'';
+if(typeof window!=='undefined'){
+  const originalSetItem=Storage.prototype.setItem;
+  Storage.prototype.setItem=function(key,value){
+    originalSetItem.call(this,key,value);
+    if(key===KEY&&bootUserId){try{supabase.from('user_app_state').upsert({user_id:bootUserId,state:JSON.parse(value),updated_at:new Date().toISOString()}).then(({error})=>error&&console.error('RK FITNESS state sync failed',error))}catch{}}
+  };
+  supabase.auth.onAuthStateChange(async(_event,session)=>{
+    const nextId=session?.user?.id||'';
+    if(nextId===bootUserId)return;
+    if(!nextId){localStorage.removeItem(ACTIVE_USER_KEY);return}
+    localStorage.setItem(ACTIVE_USER_KEY,nextId);
+    const localState=load();
+    const {data:remote,error}=await supabase.from('user_app_state').select('state').eq('user_id',nextId).maybeSingle();
+    if(!error&&remote?.state)localStorage.setItem(`${KEY.split(':')[0]}:${nextId}`,JSON.stringify(normalise(remote.state)));
+    else if(!error)await supabase.from('user_app_state').upsert({user_id:nextId,state:localState,updated_at:new Date().toISOString()});
+    window.location.reload();
+  });
+  document.addEventListener('click',event=>{
+    const card=event.target.closest('button.today.complete-card');
+    if(card){event.preventDefault();event.stopImmediatePropagation();window.alert('Daily Starter is already completed for today. Come back tomorrow to continue your streak.');}
+  },true);
+}
 function xpForWorkouts(workouts){let ordered=[...workouts].filter(w=>w?.date).sort((a,b)=>new Date(a.date)-new Date(b.date)),previousDay='',total=0;ordered.forEach(w=>{let day=(w.day||w.date.slice(0,10)),exerciseCount=Math.max(0,Number(w.exerciseCount)||0),xp=XP_RULES.workout+exerciseCount*XP_RULES.exercise+(w.isDaily?XP_RULES.dailyQuest:0),prior=new Date(`${day}T00:00:00`);prior.setDate(prior.getDate()-1);if(previousDay===prior.toISOString().slice(0,10))xp+=XP_RULES.streakDay;total+=xp;previousDay=day});return total}
 function levelState(xp){let level=1,spent=0,need=1500;while(level<100&&xp>=spent+need){spent+=need;level++;need=1500+(level-1)*350}return{level,spent,need:level===100?0:need,progress:level===100?100:Math.min(100,Math.round((xp-spent)/need*100)),next:level===100?0:Math.max(0,spent+need-xp)}}
 function stats(workouts){let days=[...new Set(workouts.map(x=>x.day))].sort(),d=new Date(),streak=0;while(days.includes(d.toISOString().slice(0,10))){streak++;d.setDate(d.getDate()-1)}let longest=0,run=0,last=null;days.forEach(day=>{let now=new Date(`${day}T00:00:00`);run=last&&Math.round((now-last)/86400000)===1?run+1:1;longest=Math.max(longest,run);last=now});return{streak,longest,xp:xpForWorkouts(workouts),minutes:workouts.reduce((n,x)=>n+x.duration,0),activeDays:days.length}}
