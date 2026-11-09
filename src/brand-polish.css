@@ -2636,3 +2636,79 @@ body {
 }
 
 .phone.customedit .edit-section-title button { flex:0 0 auto;padding:8px 13px;border:1px solid #b7ff00;border-radius:22px;background:#0c130a;color:#dfffa0;font-size:12px;font-weight:700; }
+
+/* Premium My Profile page */
+.phone.me { background:#050805;color:#fff; }
+.phone.me .profile-screen { min-height:100dvh;padding:18px 20px calc(112px + env(safe-area-inset-bottom));background:radial-gradient(ellipse at 88% 0,#1b310d 0,transparent 32%),#050805;color:#f7f9f5; }
+.phone.me .profile-premium-header { display:flex;align-items:center;gap:18px;min-height:94px;margin-bottom:18px;padding:8px 0 16px;background:linear-gradient(110deg,transparent 52%,#16230a 100%); }
+.phone.me .profile-premium-header>.logo { width:150px;height:74px;flex:0 0 150px;display:grid;place-items:center;padding-right:16px;border-right:2px solid #b7ff00; }
+.phone.me .profile-premium-header>.logo img { width:100%;max-height:70px;object-fit:contain; }
+.phone.me .profile-heading { flex:1;min-width:0; }
+.phone.me .profile-heading h1 { margin:0;font-size:clamp(25px,5.4vw,42px);line-height:1;color:#fff;letter-spacing:-.04em; }
+.phone.me .profile-heading p { margin:8px 0 0;color:#c0c9bd;font-size:clamp(11px,2.6vw,17px); }
+.phone.me .profile-edit-button { display:flex;align-items:center;gap:8px;flex:0 0 auto;padding:10px 17px;border:1px solid #b7ff00;border-radius:26px;background:#0b1309;color:#b7ff00;font-size:15px;font-weight:800; }
+.phone.me .profile-edit-button span { font-size:22px; }
+.phone.me .profile-hero-card { position:relative;overflow:hidden;min-height:460px;padding:28px 30px 22px;border:1px solid #87bc00;border-radius:32px;background-size:cover;background-position:center right;box-shadow:inset 0 0 30px #aaff0010; }
+.phone.me .profile-hero-card:before { content:"";position:absolute;inset:0 auto auto 0;width:58%;height:90%;border-top:2px solid #b7ff00;border-radius:50%;transform:translate(-25%,25%);opacity:.65;pointer-events:none; }
+.phone.me .profile-hero-identity { position:relative;z-index:1;display:flex;align-items:center;flex-direction:column;text-align:center; }
+.phone.me .profile-avatar-wrap { position:relative;margin:0 0 12px; }
+.phone.me .profile-avatar { width:142px;height:142px;display:grid;place-items:center;overflow:hidden;border:4px solid #b7ff00;border-radius:50%;background:radial-gradient(circle,#263719,#070b06 70%);box-shadow:0 0 0 6px #b7ff0019; }
+.phone.me .profile-avatar img { width:100%;height:100%;object-fit:cover; }
+.phone.me .profile-avatar span { color:#caff43;font-size:50px;font-weight:800; }
+.phone.me .profile-rank-crown { position:absolute;right:-7px;bottom:0;width:48px;height:48px;display:grid;place-items:center;border:2px solid #b7ff00;border-radius:50%;background:#071007;color:#b7ff00;font-size:25px; }
+.phone.me .profile-hero-identity h2 { margin:0;color:#fff;font-size:clamp(30px,6vw,44px);line-height:1.1; }
+.phone.me .profile-user-email { max-width:100%;margin:8px 0 16px;color:#d2d9ce;font-size:clamp(12px,2.8vw,18px);overflow-wrap:anywhere; }
+.phone.me .profile-level-pill { display:flex;align-items:center;gap:9px;padding:9px 19px;border:1px solid #b7ff00;border-radius:25px;background:#091209dd;color:#eff7e9;font-size:15px; }
+.phone.me .profile-level-pill b { color:#b7ff00;font-size:20px; }
+.phone.me .profile-stat-row { position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);margin-top:22px;padding-top:17px;border-top:1px solid #a7bd8344; }
+.phone.me .profile-stat-row>div { display:flex;align-items:center;flex-direction:column;gap:3px; }
+.phone.me .profile-stat-row>div+div { border-left:1px solid #b7ff0060; }
+.phone.me .profile-stat-row svg { width:28px;height:28px;color:#b7ff00; }
+.phone.me .profile-stat-row strong { color:#fff;font-size:clamp(24px,5vw,36px);line-height:1.05; }
+.phone.me .profile-stat-row small { color:#d0d9cb;font-size:clamp(11px,2.5vw,16px); }
+.phone.me .profile-menu-list { display:grid;gap:12px;margin-top:18px; }
+.phone.me .profile-menu-card { position:relative;isolation:isolate;overflow:hidden;width:100%;min-height:112px;display:flex;align-items:center;gap:20px;padding:16px 20px;text-align:left;border:1px solid #30451f;border-radius:28px;background:linear-gradient(105deg,#121b10,#0c120b 72%); }
+.phone.me .profile-menu-card:after { content:"";position:absolute;z-index:-1;top:-50%;right:4%;width:40%;height:190%;border-left:2px solid #b7ff0088;border-radius:50%;transform:rotate(25deg);box-shadow:-8px 0 22px #b7ff0017; }
+.phone.me .profile-menu-icon { width:68px;height:68px;display:grid;place-items:center;flex:0 0 68px;border:2px solid #82bd00;border-radius:20px;background:#111d0b;color:#b7ff00;box-shadow:inset 0 0 18px #8fce1620; }
+.phone.me .profile-menu-icon svg { width:40px;height:40px; }
+.phone.me .profile-menu-copy { z-index:1;display:grid;gap:6px;flex:1;min-width:0; }
+.phone.me .profile-menu-copy b { color:#fff;font-size:clamp(17px,3.7vw,25px); }
+.phone.me .profile-menu-copy small { color:#bdc6b9;font-size:clamp(11px,2.5vw,16px);line-height:1.35; }
+.phone.me .profile-menu-art { position:absolute;z-index:-1;right:14%;width:110px;height:100px;display:grid;place-items:center;color:#b7ff00;opacity:.68; }
+.phone.me .profile-menu-art svg { width:90px;height:90px;filter:drop-shadow(0 0 8px #b7ff0033); }
+.phone.me .profile-menu-achievements .profile-menu-art { color:#ddff48; }
+.phone.me .profile-menu-food .profile-menu-art { width:125px;height:105px;border-radius:50%;background:radial-gradient(ellipse,#425020,#151a0d 60%,transparent 72%); }
+.phone.me .profile-menu-settings .profile-menu-art { color:#91a084; }
+.phone.me .profile-menu-arrow { z-index:1;color:#f3f6f0;font-size:38px;line-height:1; }
+.phone.me .profile-edit-panel { display:grid;gap:14px;margin-top:16px;padding:18px;border:1px solid #344b20;border-radius:22px;background:#101810; }
+.phone.me .profile-edit-panel h2 { margin:0 0 4px;font-size:22px; }
+.phone.me .profile-edit-panel .field { color:#e8eee3; }
+.phone.me .profile-edit-panel .field input { background:#0b100b;color:#fff;border-color:#46543c; }
+.phone.me .profile-edit-panel .avatar-upload { display:grid;gap:8px;color:#e8eee3; }
+.phone.me .profile-edit-panel .avatar-upload small { color:#aab6a4; }
+@media(max-width:600px) {
+ .phone.me .profile-screen { padding:12px 12px calc(102px + env(safe-area-inset-bottom)); }
+ .phone.me .profile-premium-header { gap:9px;min-height:72px;margin-bottom:12px; }
+ .phone.me .profile-premium-header>.logo { width:70px;height:56px;flex-basis:70px;padding-right:8px;border-right-width:1px; }
+ .phone.me .profile-premium-header>.logo img { max-height:52px; }
+ .phone.me .profile-heading h1 { font-size:clamp(21px,5.8vw,30px); }
+ .phone.me .profile-heading p { font-size:10px;line-height:1.3; }
+ .phone.me .profile-edit-button { gap:4px;padding:8px 11px;font-size:12px; }
+ .phone.me .profile-edit-button span { font-size:18px; }
+ .phone.me .profile-hero-card { min-height:390px;padding:20px 12px 17px;border-radius:24px;background-position:64% center; }
+ .phone.me .profile-avatar { width:112px;height:112px; }
+ .phone.me .profile-rank-crown { width:39px;height:39px;font-size:20px; }
+ .phone.me .profile-user-email { margin:6px 0 12px; }
+ .phone.me .profile-level-pill { padding:7px 13px;font-size:12px; }
+ .phone.me .profile-stat-row { margin-top:19px;padding-top:14px; }
+ .phone.me .profile-menu-list { gap:9px;margin-top:13px; }
+ .phone.me .profile-menu-card { min-height:84px;gap:12px;padding:11px 12px;border-radius:20px; }
+ .phone.me .profile-menu-icon { width:52px;height:52px;flex-basis:52px;border-radius:16px; }
+ .phone.me .profile-menu-icon svg { width:31px;height:31px; }
+ .phone.me .profile-menu-copy { gap:3px; }
+ .phone.me .profile-menu-copy b { font-size:16px; }
+ .phone.me .profile-menu-copy small { font-size:10px; }
+ .phone.me .profile-menu-art { right:11%;width:70px;height:70px; }
+ .phone.me .profile-menu-art svg { width:60px;height:60px; }
+ .phone.me .profile-menu-arrow { font-size:29px; }
+}
