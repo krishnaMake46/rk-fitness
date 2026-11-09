@@ -2561,3 +2561,78 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .exercise-category-scroll button,.exercise-premium-header .saved { transition: none; }
 }
+
+/* Premium Edit Workout page */
+.phone.customedit { background: #050805; color: #f5f8f2; }
+.phone.customedit .custom-edit-screen { min-height: 100dvh; padding: 18px 20px calc(118px + env(safe-area-inset-bottom)); background: radial-gradient(ellipse at 80% 0%,#12210b 0,transparent 34%),#050805; color:#f5f8f2; }
+.phone.customedit .edit-premium-header { display:flex; align-items:center; gap:14px; min-height:86px; margin:0 0 18px; padding:10px 0 16px; background:linear-gradient(100deg,transparent 50%,#263b1380),url('/assets/custom-dumbbells.png') right center/auto 100% no-repeat; }
+.phone.customedit .edit-back { width:48px;height:48px;flex:0 0 48px;border:1px solid #b7ff00;border-radius:50%;color:#b7ff00;font-size:35px;line-height:1;background:#071006; }
+.phone.customedit .edit-premium-header .logo { width:84px;height:70px;flex:0 0 84px;display:grid;place-items:center;border-right:1px solid #b7ff00;padding-right:12px; }
+.phone.customedit .edit-premium-header .logo img { max-width:70px;max-height:64px;object-fit:contain; }
+.phone.customedit .edit-premium-header h1 { margin:0;font-size:clamp(22px,5vw,34px);line-height:1.05;color:#fff; }
+.phone.customedit .edit-premium-header p { margin:7px 0 0;color:#c0c9bd;font-size:clamp(11px,2.9vw,16px); }
+.phone.customedit .edit-info-card,.phone.customedit .edit-exercise-card,.phone.customedit .edit-add-banner { background:linear-gradient(120deg,#111b10,#0b100b 70%);border:1px solid #344b20;border-radius:18px; }
+.phone.customedit .edit-info-card { padding:16px;box-shadow:inset 0 0 22px #7cae1710; }
+.phone.customedit .edit-info-main { display:flex;align-items:center;gap:14px; }
+.phone.customedit .edit-dumbbell { width:66px;height:66px;display:grid;place-items:center;flex:0 0 66px;border:1px solid #b7ff00;border-radius:17px;color:#b7ff00;font-size:38px;background:#0b1508; }
+.phone.customedit .edit-info-main label { flex:1;color:#f5f8f2;font-size:14px;font-weight:750; }
+.phone.customedit .edit-info-main input { display:block;width:100%;height:52px;margin-top:7px;padding:0 15px;border:1px solid #91c900;border-radius:13px;background:#090e09;color:#f8fff3;font:inherit;font-size:18px;font-weight:700;outline:none; }
+.phone.customedit .edit-info-main input:focus,.phone.customedit .edit-search:focus-within { border-color:#b7ff00;box-shadow:0 0 0 3px #b7ff0025; }
+.phone.customedit .edit-info-main input::placeholder { color:#83907f; }
+.phone.customedit .edit-stats { display:grid;grid-template-columns:repeat(3,1fr);margin-top:14px;border:1px solid #34452e;border-radius:13px;background:#10190f; }
+.phone.customedit .edit-stats span { display:flex;align-items:center;justify-content:center;gap:7px;min-height:45px;color:#e5eadd;font-size:clamp(10px,2.7vw,14px); }
+.phone.customedit .edit-stats span+span { border-left:1px solid #283622; }
+.phone.customedit .edit-stats b { color:#b7ff00;font-size:21px; }
+.phone.customedit .edit-section-title { display:flex;align-items:center;justify-content:space-between;gap:10px;margin:22px 0 11px; }
+.phone.customedit .edit-section-title h2 { margin:0;font-size:clamp(17px,4vw,23px); }
+.phone.customedit .edit-section-title span { color:#a9b5a5;font-size:11px; }
+.phone.customedit .planned-exercises,.phone.customedit .available-exercises { display:grid;gap:7px; }
+.phone.customedit .edit-exercise-card { display:flex;align-items:center;gap:10px;min-height:72px;padding:7px 10px; }
+.phone.customedit .edit-exercise-card>img { width:68px;height:58px;flex:0 0 68px;object-fit:cover;border-radius:10px;border:1px solid #344c25; }
+.phone.customedit .edit-exercise-copy { flex:1;min-width:0;display:grid;gap:4px; }
+.phone.customedit .edit-exercise-copy b { color:#fff;font-size:clamp(12px,3.2vw,16px); }
+.phone.customedit .edit-exercise-copy small { color:#aeb8aa;font-size:11px; }
+.phone.customedit .edit-move-controls { display:grid; }
+.phone.customedit .edit-move-controls button { width:28px;height:24px;color:#c7f75b;font-size:20px;line-height:1; }
+.phone.customedit .edit-move-controls button:disabled { opacity:.25; }
+.phone.customedit .edit-reps { flex:0 0 auto;padding:7px 9px;border:1px solid #465341;border-radius:18px;color:#e0e8dc;background:#171e17;font-size:10px;white-space:nowrap; }
+.phone.customedit .edit-exercise-card .remove { color:#ff5949;font-size:21px;min-width:34px; }
+.phone.customedit .edit-add-banner { width:100%;display:flex;align-items:center;gap:14px;min-height:82px;margin:16px 0;padding:13px 18px;text-align:left;background:linear-gradient(110deg,#10190d 45%,#182610 70%,#0b100b),url('/assets/custom-dumbbells.png') right center/auto 100% no-repeat; }
+.phone.customedit .edit-add-icon { width:48px;height:48px;display:grid;place-items:center;border:2px solid #b7ff00;border-radius:13px;color:#b7ff00;font-size:35px;line-height:1; }
+.phone.customedit .edit-add-banner>span:nth-child(2) { display:grid;gap:4px;flex:1; }
+.phone.customedit .edit-add-banner b { color:#fff;font-size:19px; }
+.phone.customedit .edit-add-banner small { color:#b5c0ae;font-size:12px; }
+.phone.customedit .edit-add-banner i { width:42px;height:42px;display:grid;place-items:center;border:1px solid #b7ff00;border-radius:50%;color:#b7ff00;font-size:30px;font-style:normal; }
+.phone.customedit .edit-search { display:flex;align-items:center;gap:10px;height:51px;padding:0 13px;border:1px solid #465341;border-radius:26px;background:#0d130d; }
+.phone.customedit .edit-search>span:first-child { color:#eaf2e5;font-size:25px; }
+.phone.customedit .edit-search input { flex:1;min-width:0;border:0;outline:0;background:transparent;color:#fff;font-size:14px; }
+.phone.customedit .edit-search input::placeholder { color:#aab4a6; }
+.phone.customedit .edit-filter-icon { color:#b7ff00;font-size:24px; }
+.phone.customedit .edit-muscle-filters { display:flex;gap:7px;overflow-x:auto;padding:12px 1px;scrollbar-width:none; }
+.phone.customedit .edit-muscle-filters::-webkit-scrollbar { display:none; }
+.phone.customedit .edit-muscle-filters button { flex:0 0 auto;padding:8px 13px;border:1px solid #37472f;border-radius:22px;background:#10170f;color:#d5dfd0;font-size:12px; }
+.phone.customedit .edit-muscle-filters button.active { border-color:#b7ff00;background:#b7ff00;color:#080b06;font-weight:800; }
+.phone.customedit .edit-drag-mark { color:#b7ff00;font-size:23px; }
+.phone.customedit .edit-add-button,.phone.customedit .edit-added { flex:0 0 auto;min-width:88px;padding:10px 11px;border-radius:22px;background:#b7ff00;color:#090d06;font-weight:800;font-size:12px; }
+.phone.customedit .edit-added { background:#172513;color:#b7ff00;border:1px solid #789b28; }
+.phone.customedit .edit-footer { display:grid;justify-items:center;gap:8px;padding:16px 0 8px; }
+.phone.customedit .edit-footer .delete-workout { margin:0;color:#e86858; }
+.phone.customedit .bottom-save { position:sticky;bottom:calc(8px + env(safe-area-inset-bottom));z-index:6;min-height:58px;border-radius:16px;background:#b7ff00;color:#060905;font-weight:900;font-size:17px;box-shadow:0 8px 22px #8ac90035; }
+.phone.customedit .bottom-save span { margin-right:8px;font-size:22px; }
+@media(max-width:430px) {
+ .phone.customedit .custom-edit-screen { padding:12px 12px calc(104px + env(safe-area-inset-bottom)); }
+ .phone.customedit .edit-premium-header { gap:8px;min-height:72px; }
+ .phone.customedit .edit-back { width:38px;height:38px;flex-basis:38px;font-size:29px; }
+ .phone.customedit .edit-premium-header .logo { width:60px;height:56px;flex-basis:60px;padding-right:7px; }
+ .phone.customedit .edit-premium-header .logo img { max-width:51px;max-height:48px; }
+ .phone.customedit .edit-info-card { padding:11px; }
+ .phone.customedit .edit-dumbbell { width:48px;height:48px;flex-basis:48px;font-size:28px; }
+ .phone.customedit .edit-info-main { gap:9px; }
+ .phone.customedit .edit-exercise-card { gap:7px;padding:6px; }
+ .phone.customedit .edit-exercise-card>img { width:52px;height:48px;flex-basis:52px; }
+ .phone.customedit .edit-move-controls button { width:20px; }
+ .phone.customedit .edit-reps { display:none; }
+ .phone.customedit .edit-add-button,.phone.customedit .edit-added { min-width:70px;padding:9px 8px;font-size:10px; }
+}
+
+.phone.customedit .edit-section-title button { flex:0 0 auto;padding:8px 13px;border:1px solid #b7ff00;border-radius:22px;background:#0c130a;color:#dfffa0;font-size:12px;font-weight:700; }
