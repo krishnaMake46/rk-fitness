@@ -1,0 +1,187 @@
+/* RK FITNESS auth, brand and profile polish */
+body {
+  background: #050705;
+  color: #f5f8f2;
+}
+
+.logo {
+  width: max-content;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #050705;
+}
+
+.logo img {
+  display: block;
+  width: 58px;
+  height: 58px;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.splash,
+.welcome {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.phone.otp {
+  background: radial-gradient(ellipse at 50% 8%, #172318 0, #0b100b 42%, #050705 100%);
+  color: #f5f8f2;
+}
+
+.phone.otp .auth {
+  min-height: calc(100dvh - 108px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px 8px 26px;
+}
+
+.phone.otp .auth > .logo {
+  margin: 0 auto 20px;
+}
+
+.phone.otp .auth > .logo img {
+  width: 88px;
+  height: 88px;
+}
+
+.phone.otp .top {
+  margin-bottom: 24px;
+}
+
+.phone.otp .top b {
+  color: #eef5e8;
+  font-size: 14px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.phone.otp .big-icon {
+  margin: 8px 0 18px;
+  color: var(--lime);
+  font-size: 48px;
+  line-height: 1;
+}
+
+.phone.otp .auth h1 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: clamp(24px, 6vw, 30px);
+  letter-spacing: -0.035em;
+}
+
+.phone.otp .auth > p {
+  max-width: 320px;
+  margin: 0 auto 20px;
+  color: #b7c2b2;
+  font-size: 14px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.phone.otp .otp {
+  height: 56px;
+  margin: 0 0 14px;
+  border: 1px solid #65715f;
+  border-radius: 14px;
+  background: #111811;
+  color: #fff;
+  font-size: 22px;
+  letter-spacing: 0.35em;
+}
+
+.phone.otp .lime {
+  min-height: 52px;
+  border-radius: 14px;
+  color: #10140b;
+  box-shadow: 0 8px 24px #baff0024;
+}
+
+.phone.otp .link {
+  margin: 18px auto 0;
+  color: #c7ff61;
+  font-size: 14px;
+}
+
+.phone.me .profile {
+  padding: 24px 18px 22px;
+  border: 1px solid #baff0030;
+  border-radius: 20px;
+  background: linear-gradient(155deg, #182318, #101610 68%);
+  box-shadow: 0 12px 30px #0004;
+}
+
+.phone.me .avatar.big {
+  width: 82px;
+  height: 82px;
+  margin: 0 auto 12px;
+  overflow: hidden;
+  border: 2px solid var(--lime);
+  box-shadow: 0 0 0 5px #baff0015;
+  font-size: 30px;
+}
+
+.phone.me .avatar.big img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.phone.me .profile h2 {
+  margin: 6px 0;
+  font-size: 22px;
+  letter-spacing: -0.025em;
+}
+
+.phone.me .profile p {
+  color: #bdc9b8;
+  font-size: 12px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.phone.me .profile aside {
+  justify-content: space-around;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #ffffff18;
+}
+
+.phone.me .profile aside b {
+  font-size: 20px;
+}
+
+.phone.me .profile aside small {
+  margin-top: 3px;
+  color: #aab8a4;
+  font-size: 11px;
+}
+
+.phone.me .menu {
+  min-height: 54px;
+  padding: 14px 8px;
+  font-size: 14px;
+}
+
+@media (max-width: 380px) {
+  .phone.otp .auth {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .phone.me .profile {
+    padding: 20px 14px;
+  }
+
+  .phone.me .profile p {
+    font-size: 11px;
+  }
+}
