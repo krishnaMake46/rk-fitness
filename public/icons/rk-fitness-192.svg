@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
   <rect width="192" height="192" rx="42" fill="#121411"/>
-  <circle cx="96" cy="96" r="77" fill="none" stroke="#d1ff19" stroke-width="7"/>
-  <path d="M45 65h9v25q7-10 18-10 12 0 12 13v27h-9V95q0-8-7-8-8 0-14 9v24h-9zm67 16v8q-7-4-15-4-7 0-7 4 0 3 8 5l6 2q12 4 12 12 0 13-19 13-10 0-18-4v-9q9 5 18 5 10 0 10-5 0-3-7-5l-7-2q-12-4-12-12 0-12 17-12 8 0 14 4z" fill="#d1ff19"/>
+  <circle cx="96" cy="96" r="77" fill="none" stroke="#baff00" stroke-width="7"/>
+  <path d="M45 65h9v25q7-10 18-10 12 0 12 13v27h-9V95q0-8-7-8-8 0-14 9v24h-9zm67 16v8q-7-4-15-4-7 0-7 4 0 3 8 5l6 2q12 4 12 12 0 13-19 13-10 0-18-4v-9q9 5 18 5 10 0 10-5 0-3-7-5l-7-2q-12-4-12-12 0-12 17-12 8 0 14 4z" fill="#baff00"/>
   <text x="96" y="153" fill="#fff" font-family="Arial, sans-serif" font-size="14" font-weight="800" letter-spacing="2" text-anchor="middle">FITNESS</text>
 </svg>
