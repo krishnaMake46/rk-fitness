@@ -453,7 +453,8 @@ body {
 .phone.settings,
 .phone.goals,
 .phone.achievements,
-.phone.report {
+.phone.report,
+.phone.food {
   background: radial-gradient(circle at 50% 0, #1b2918 0, #080b08 48%, #020302 100%);
   color: #f5f8f2;
 }
@@ -463,6 +464,89 @@ body {
 .phone.achievements .top,
 .phone.report .top {
   color: #fff;
+}
+
+.phone.food .top {
+  color: #fff;
+}
+
+.phone.food .pending {
+  min-height: calc(100dvh - 150px);
+  color: #f5f8f2;
+}
+
+.phone.food .pending > div {
+  width: 100%;
+  max-width: 350px;
+  margin: auto;
+  padding: 26px 20px;
+  border: 1px solid #baff0038;
+  border-radius: 20px;
+  background: linear-gradient(150deg, #141c13, #0a0e0a);
+  text-align: center;
+}
+
+.phone.food .pending i {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 16px;
+  border: 1px solid #baff0055;
+  background: #baff0018;
+  color: var(--lime);
+}
+
+.phone.food .pending h1 {
+  color: #fff;
+  font-size: 21px;
+}
+
+.phone.food .pending p {
+  color: #d1dbcb;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.phone.food .pending small {
+  color: #c7ff61;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.phone.custom > article > .lime {
+  color: #10140b;
+}
+
+.phone.custom > article > div > .lime {
+  color: #10140b;
+}
+
+.phone.custom .create-workout {
+  display: grid;
+  width: 44px !important;
+  height: 44px !important;
+  place-items: center;
+  border: 1px solid #baff0090;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 25%, #25351e, #101710 72%) !important;
+  color: var(--lime) !important;
+  font-family: Arial, sans-serif;
+  font-size: 30px !important;
+  font-weight: 400;
+  line-height: 1;
+  box-shadow: 0 0 0 4px #baff0010, 0 5px 16px #0006;
+  transition: border-color 160ms ease, color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.phone.custom .create-workout:hover,
+.phone.custom .create-workout:focus-visible {
+  border-color: var(--lime);
+  color: #d5ff69 !important;
+  box-shadow: 0 0 0 5px #baff0018, 0 0 18px #baff0035;
+}
+
+.phone.custom .create-workout:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 3px;
 }
 
 .phone.settings h3,
