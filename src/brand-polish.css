@@ -1,4 +1,77 @@
 /* RK FITNESS auth, brand and profile polish */
+body,
+html,
+#root {
+  min-height: 100%;
+  background: #050705;
+}
+
+.phone.boot-screen {
+  display: grid;
+  place-items: center;
+  min-height: 100dvh;
+  padding: 0;
+  background: radial-gradient(ellipse at center, #142014 0, #080b08 54%, #030403 100%);
+}
+
+.phone.boot-screen .loader {
+  width: 32px;
+  height: 32px;
+  border-color: #baff0030;
+  border-top-color: var(--lime);
+}
+
+.task-notice {
+  width: min(100%, 420px) !important;
+  padding: 28px 24px calc(24px + env(safe-area-inset-bottom)) !important;
+  border: 1px solid #baff0045;
+  border-radius: 24px 24px 0 0 !important;
+  background: linear-gradient(155deg, #172117, #0b100b 78%) !important;
+  color: #f5f8f2;
+  box-shadow: 0 -12px 45px #0008;
+  text-align: center;
+}
+
+.task-notice-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 16px;
+  border: 1px solid #baff0070;
+  border-radius: 50%;
+  background: #baff0018;
+  color: var(--lime);
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.task-notice > small {
+  color: #c7ff61;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.task-notice h2 {
+  margin: 10px 0 8px;
+  color: #fff;
+  font-size: 23px;
+}
+
+.task-notice p {
+  margin: 0 0 22px;
+  color: #bdc9b8;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.task-notice .lime {
+  min-height: 50px;
+  border-radius: 14px;
+  color: #111;
+}
+
 .app {
   position: relative;
   width: 100%;
