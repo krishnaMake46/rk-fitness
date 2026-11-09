@@ -32,6 +32,21 @@ html,
   text-align: center;
 }
 
+.task-notice-overlay {
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 18px calc(18px + env(safe-area-inset-bottom));
+}
+
+.task-notice-overlay .task-notice {
+  width: min(100%, 420px) !important;
+  max-height: calc(100dvh - 48px);
+  margin: auto !important;
+  overflow-y: auto;
+  border-radius: 24px !important;
+}
+
 .task-notice-icon {
   display: grid;
   place-items: center;
@@ -316,6 +331,107 @@ body {
 .phone.home .schedule-empty b {
   color: var(--lime);
   font-size: 20px;
+}
+
+.phone.home .home-hero {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 11px;
+  margin: 0 0 18px;
+}
+
+.phone.home .home-hero .logo {
+  width: 54px;
+  height: 54px;
+  margin: 0;
+}
+
+.phone.home .home-hero .logo img {
+  width: 54px;
+  height: 54px;
+}
+
+.home-welcome {
+  min-width: 0;
+}
+
+.home-welcome > small {
+  display: block;
+  margin-bottom: 3px;
+  color: #c7ff61;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+}
+
+.phone.home .home-welcome h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(17px, 4.8vw, 22px);
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  overflow-wrap: anywhere;
+}
+
+.home-welcome p {
+  margin: 4px 0 0;
+  color: #d5dfd0;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.home-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.home-actions > button:first-child {
+  width: 32px;
+  height: 36px;
+  color: #d5dfd0;
+  font-size: 20px;
+}
+
+.home-actions .avatar {
+  width: 38px;
+  height: 38px;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+.home-actions .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.phone.home .streak {
+  background: linear-gradient(120deg, #111510, #090c09);
+}
+
+.phone.home .streak small,
+.phone.home .schedule-summary,
+.phone.home .muted {
+  color: #d6e0d1;
+}
+
+.phone.home .streak small {
+  font-size: 11px;
+}
+
+.phone.home h3 {
+  color: #f5f8f2;
+}
+
+.phone.home .today small {
+  color: #f3f7ee;
+  font-size: 10px;
+}
+
+.phone.home .today b {
+  color: #fff;
 }
 
 @media (max-width: 380px) {
