@@ -1706,6 +1706,8 @@ body {
   min-height: 184px;
   padding: 15px;
   border-radius: 20px;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .phone.home .feature-copy {
