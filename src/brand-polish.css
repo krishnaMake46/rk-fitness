@@ -512,8 +512,10 @@ body {
   line-height: 1.5;
 }
 
-.phone.custom > article > .lime {
-  color: #10140b;
+.phone.custom .weekly-setup-button {
+  color: #10140b !important;
+  -webkit-text-fill-color: #10140b;
+  text-shadow: none;
 }
 
 .phone.custom > article > div > .lime {
