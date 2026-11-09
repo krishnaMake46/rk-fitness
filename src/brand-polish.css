@@ -1690,3 +1690,129 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Match the reference's denser mobile proportions so the lower cards sit above nav. */
+.phone.home .home-screen {
+  gap: 11px;
+}
+
+.phone.home .home-streak {
+  min-height: 80px;
+  gap: 9px;
+  padding: 10px 13px;
+}
+
+.phone.home .home-feature {
+  min-height: 184px;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.phone.home .feature-copy {
+  gap: 7px;
+}
+
+.phone.home .feature-copy > b {
+  font-size: clamp(21px, 5.5vw, 28px);
+}
+
+.phone.home .feature-cta {
+  padding: 10px 15px;
+  font-size: 15px;
+}
+
+.phone.home .home-schedule {
+  gap: 8px;
+  padding: 10px;
+}
+
+.phone.home .schedule-card {
+  grid-template-columns: 46px minmax(0, 1fr) 36px;
+  min-height: 66px;
+  padding: 7px;
+}
+
+.phone.home .schedule-icon {
+  width: 44px;
+  height: 44px;
+}
+
+.phone.home .play-square {
+  width: 34px;
+  height: 34px;
+}
+
+.phone.home .schedule-card.schedule-completed {
+  border-color: #baff0080;
+  background: linear-gradient(110deg, #1d2b14, #111a10);
+}
+
+.phone.home .schedule-completed .play-square {
+  border: 1px solid #baff0080;
+  background: #baff0018;
+  color: var(--lime);
+}
+
+.phone.home .momentum-card {
+  grid-template-columns: 68px minmax(0, 1fr) 22px;
+  min-height: 112px;
+  gap: 10px;
+  padding: 10px;
+}
+
+.phone.home .momentum-ring {
+  width: 64px;
+  height: 64px;
+}
+
+.phone.home .momentum-copy h2 {
+  font-size: 14px;
+}
+
+.phone.home .momentum-copy p {
+  margin: 4px 0 7px;
+}
+
+.phone.home .week-dots i {
+  width: 15px;
+  height: 15px;
+}
+
+.phone.home .food-card {
+  grid-template-columns: 52px minmax(0, 1fr) 20px;
+  min-height: 70px;
+  padding: 8px 10px;
+}
+
+.phone.home .food-card img {
+  width: 50px;
+  height: 50px;
+}
+
+.phone.home .food-card b {
+  font-size: 14px;
+}
+
+.phone.home .food-card small {
+  font-size: 10px;
+}
+
+@media (max-width: 390px) {
+  .phone.home .home-feature {
+    min-height: 176px;
+    padding: 12px;
+  }
+
+  .phone.home .momentum-card {
+    grid-template-columns: 58px minmax(0, 1fr);
+  }
+
+  .phone.home .momentum-ring {
+    width: 54px;
+    height: 54px;
+  }
+
+  .phone.home .momentum-bars {
+    display: none;
+  }
+}
