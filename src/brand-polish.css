@@ -434,6 +434,476 @@ body {
   color: #fff;
 }
 
+/* Training dashboard refreshed to follow the supplied RK FITNESS reference. */
+.phone.home {
+  padding-top: max(18px, env(safe-area-inset-top));
+  padding-bottom: calc(108px + env(safe-area-inset-bottom));
+  background: radial-gradient(ellipse at 85% 0%, #20360d 0, #0a1108 38%, #050805 78%) !important;
+}
+
+.phone.home .home-screen {
+  display: grid;
+  gap: 16px;
+}
+
+.phone.home .home-hero {
+  grid-template-columns: 58px minmax(0, 1fr) auto;
+  gap: 10px;
+  min-height: 70px;
+  margin: 0;
+}
+
+.phone.home .home-hero .logo,
+.phone.home .home-hero .logo img {
+  width: 58px;
+  height: 58px;
+}
+
+.phone.home .home-hero .logo {
+  border-right: 1px solid #d5ff5b55;
+  padding-right: 7px;
+}
+
+.phone.home .home-welcome > small {
+  margin-bottom: 4px;
+  font-size: 9px;
+}
+
+.phone.home .home-welcome h1 {
+  font-size: clamp(17px, 5vw, 23px);
+}
+
+.phone.home .home-welcome p {
+  margin-top: 3px;
+  font-size: 10px;
+}
+
+.phone.home .home-actions {
+  gap: 4px;
+}
+
+.phone.home .home-actions > button:first-child {
+  width: 28px;
+  font-size: 19px;
+}
+
+.phone.home .home-actions .avatar {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--lime);
+}
+
+.phone.home .home-streak {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  min-height: 88px;
+  margin: 0;
+  padding: 14px 15px;
+  border: 1px solid #baff0055;
+  border-radius: 20px;
+  background: linear-gradient(115deg, #172515, #0b100b 72%);
+  box-shadow: inset 0 1px #ffffff0a, 0 8px 24px #0004;
+}
+
+.phone.home .home-streak > i {
+  display: grid;
+  width: 44px;
+  height: 48px;
+  place-items: center;
+  border-right: 1px solid #d2ef9b55;
+  color: #ffb23e;
+  font-size: 27px;
+  font-style: normal;
+}
+
+.phone.home .home-streak > span {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.phone.home .home-streak > span > b {
+  color: #fff;
+  font-size: 16px;
+}
+
+.phone.home .home-streak small {
+  overflow: hidden;
+  color: #d3dbd0;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.phone.home .home-streak em {
+  display: block;
+  height: 6px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #414640;
+}
+
+.phone.home .home-streak em i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #adf500, #d5ff00);
+}
+
+.phone.home .home-streak .level-pill {
+  padding: 7px 10px;
+  border: 1px solid var(--lime);
+  border-radius: 20px;
+  color: var(--lime);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.phone.home .home-feature {
+  position: relative;
+  display: flex;
+  height: auto;
+  min-height: 218px;
+  align-items: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 20px;
+  border: 1px solid #baff0070;
+  border-radius: 22px;
+  background-color: #101710;
+  background-position: center right;
+  background-size: cover;
+  color: #fff;
+  text-align: left;
+  box-shadow: 0 10px 28px #0005;
+}
+
+.phone.home .feature-copy {
+  display: grid;
+  width: min(72%, 290px);
+  justify-items: start;
+  gap: 10px;
+}
+
+.phone.home .feature-copy > small {
+  color: #d8ff74;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.phone.home .feature-copy > b {
+  max-width: 100%;
+  color: #fff;
+  font-size: clamp(22px, 6vw, 30px);
+  font-weight: 800;
+  line-height: 1.08;
+  overflow-wrap: anywhere;
+}
+
+.phone.home .feature-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  color: #edf3e9;
+  font-size: 11px;
+}
+
+.phone.home .feature-meta i {
+  color: var(--lime);
+  font-size: 17px;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+}
+
+.phone.home .feature-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 4px;
+  padding: 12px 18px;
+  border-radius: 13px;
+  background: var(--lime);
+  color: #10140b;
+  font-size: 17px;
+  box-shadow: 0 5px 18px #baff0045;
+}
+
+.phone.home .feature-copy > span {
+  margin-top: 0;
+}
+
+.phone.home .feature-cta strong {
+  color: #10140b;
+}
+
+.phone.home .home-schedule {
+  display: grid;
+  gap: 10px;
+  padding: 13px;
+  border: 1px solid #baff0026;
+  border-radius: 21px;
+  background: linear-gradient(145deg, #121a10, #0a0e0a);
+}
+
+.phone.home .home-schedule > header {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 2px 2px 5px;
+}
+
+.phone.home .section-icon {
+  color: var(--lime);
+  font-size: 22px;
+}
+
+.phone.home .home-schedule h2,
+.phone.home .momentum-copy h2 {
+  margin: 0;
+  color: #f7fbf3;
+  font-size: 17px;
+  line-height: 1.2;
+}
+
+.phone.home .home-schedule > header > small {
+  margin-left: auto;
+  padding: 6px 9px;
+  border: 1px solid #ffffff28;
+  border-radius: 20px;
+  background: #ffffff0c;
+  color: #eef3e9;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.phone.home .schedule-list {
+  display: grid;
+  gap: 8px;
+}
+
+.phone.home .schedule-card {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr) 42px;
+  align-items: center;
+  gap: 10px;
+  min-height: 78px;
+  padding: 9px;
+  border: 1px solid #baff0040;
+  border-radius: 18px;
+  background: linear-gradient(110deg, #182316, #101710);
+  color: #fff;
+  text-align: left;
+}
+
+.phone.home .schedule-icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border-radius: 14px;
+  background: radial-gradient(circle, #31461d, #070b07 73%);
+  color: var(--lime);
+  font-size: 32px;
+}
+
+.phone.home .schedule-icon-1 {
+  color: #d3ff22;
+}
+
+.phone.home .schedule-name {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+}
+
+.phone.home .schedule-name b {
+  color: #fff;
+  font-size: 15px;
+}
+
+.phone.home .schedule-name small {
+  overflow: hidden;
+  color: #ccd5c7;
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.phone.home .play-square {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--lime);
+  color: #11170b;
+  font-size: 16px;
+  font-style: normal;
+}
+
+.phone.home .momentum-card {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr) 34px;
+  align-items: center;
+  gap: 12px;
+  min-height: 142px;
+  padding: 15px;
+  border: 1px solid #baff0050;
+  border-radius: 22px;
+  background: linear-gradient(120deg, #1a2812, #0d120c 70%);
+}
+
+.phone.home .momentum-ring {
+  display: grid;
+  width: 88px;
+  height: 88px;
+  place-items: center;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #111811 62%, transparent 64%), conic-gradient(var(--lime) var(--progress), #414a3d 0);
+  color: #fff;
+}
+
+.phone.home .momentum-ring b {
+  font-size: 20px;
+}
+
+.phone.home .momentum-copy h2 {
+  font-size: 16px;
+}
+
+.phone.home .momentum-copy p {
+  margin: 6px 0 10px;
+  color: #cbd5c4;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.phone.home .week-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.phone.home .week-dots i {
+  display: grid;
+  width: 17px;
+  height: 17px;
+  place-items: center;
+  border: 2px solid #60695c;
+  border-radius: 50%;
+  color: #11170b;
+  font-size: 9px;
+  font-style: normal;
+}
+
+.phone.home .week-dots i.earned {
+  border-color: var(--lime);
+  background: var(--lime);
+}
+
+.phone.home .momentum-bars {
+  align-self: end;
+  color: var(--lime);
+  font-size: 25px;
+  letter-spacing: -5px;
+  white-space: nowrap;
+}
+
+.phone.home .food-card {
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr) 20px;
+  align-items: center;
+  gap: 12px;
+  min-height: 82px;
+  padding: 10px 13px;
+  border: 1px solid #baff0038;
+  border-radius: 19px;
+  background: linear-gradient(110deg, #182416, #0b100b);
+  color: #fff;
+  text-align: left;
+}
+
+.phone.home .food-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.phone.home .food-card > span {
+  display: grid;
+  gap: 4px;
+}
+
+.phone.home .food-card b {
+  color: #fff;
+  font-size: 16px;
+}
+
+.phone.home .food-card small {
+  color: #ccd5c7;
+  font-size: 11px;
+}
+
+.phone.home .food-card > i {
+  color: #f5f8f2;
+  font-size: 26px;
+  font-style: normal;
+}
+
+@media (max-width: 390px) {
+  .phone.home .home-hero {
+    grid-template-columns: 48px minmax(0, 1fr) auto;
+    gap: 7px;
+  }
+
+  .phone.home .home-hero .logo,
+  .phone.home .home-hero .logo img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .phone.home .home-actions > button:first-child {
+    width: 22px;
+  }
+
+  .phone.home .home-actions .avatar {
+    width: 34px;
+    height: 34px;
+  }
+
+  .phone.home .home-feature {
+    min-height: 200px;
+    padding: 15px;
+  }
+
+  .phone.home .feature-copy {
+    width: 76%;
+  }
+
+  .phone.home .momentum-card {
+    grid-template-columns: 76px minmax(0, 1fr);
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .phone.home .momentum-ring {
+    width: 72px;
+    height: 72px;
+  }
+
+  .phone.home .momentum-bars {
+    display: none;
+  }
+}
+
 /* Keep the workout name readable while preserving the dark workout editor. */
 .phone.customedit .field input {
   min-height: 48px;
@@ -622,6 +1092,12 @@ body {
   color: #d1dbcb;
   font-size: 14px;
   line-height: 1.55;
+}
+
+.history-detail-card .lime {
+  color: #10140b !important;
+  -webkit-text-fill-color: #10140b;
+  text-shadow: none;
 }
 
 .history-detail-card .close {
