@@ -1691,6 +1691,612 @@ body {
   }
 }
 
+/* Custom workout page rebuilt from the premium RK FITNESS reference. */
+.phone.custom {
+  padding-top: max(17px, env(safe-area-inset-top));
+  padding-bottom: calc(106px + env(safe-area-inset-bottom));
+  background: radial-gradient(ellipse at 88% 0%, #20360d 0, #0a1108 38%, #050805 78%) !important;
+  color: #f5f8f2;
+}
+
+.phone.custom .custom-screen {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.phone.custom .custom-hero-header {
+  display: grid;
+  grid-template-columns: 68px minmax(0, 1fr) 46px;
+  align-items: center;
+  gap: 12px;
+  min-height: 72px;
+  margin: 0;
+}
+
+.phone.custom .custom-hero-header > .logo {
+  width: 68px;
+  height: 62px;
+  overflow: hidden;
+  border-right: 1px solid #baff0080;
+  margin: 0;
+  padding-right: 8px;
+}
+
+.phone.custom .custom-hero-header > .logo img {
+  width: 62px;
+  height: 58px;
+  object-fit: contain;
+}
+
+.phone.custom .custom-heading {
+  min-width: 0;
+}
+
+.phone.custom .custom-heading h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(23px, 6vw, 30px);
+  line-height: 1.05;
+}
+
+.phone.custom .custom-heading p {
+  margin: 5px 0 0;
+  color: #c9d3c4;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.phone.custom .custom-hero-header .create-workout {
+  width: 44px !important;
+  height: 44px !important;
+  border: 1.5px solid var(--lime);
+  background: #0b120a !important;
+  color: var(--lime) !important;
+  font-size: 29px !important;
+  box-shadow: inset 0 0 0 4px #baff0010;
+}
+
+.phone.custom .weekly-setup {
+  min-width: 0;
+  margin: 0;
+}
+
+.phone.custom .weekly-setup-button {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) 20px;
+  align-items: center;
+  justify-items: center;
+  min-height: 54px;
+  padding: 10px 15px;
+  border-radius: 16px;
+  background: linear-gradient(105deg, #b7ff00, #a8f000) !important;
+  color: #0c1207 !important;
+  -webkit-text-fill-color: #0c1207;
+  text-shadow: none;
+  box-shadow: 0 6px 18px #baff0036;
+}
+
+.phone.custom .weekly-setup-button svg {
+  width: 23px;
+  height: 23px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.phone.custom .weekly-setup-button strong {
+  color: #0c1207;
+  font-size: clamp(10px, 3.1vw, 13px);
+  font-weight: 900;
+  letter-spacing: .015em;
+  white-space: nowrap;
+}
+
+.phone.custom .weekly-setup-button > i {
+  color: #0c1207;
+  font-size: 23px;
+  font-style: normal;
+}
+
+.phone.custom .weekly-setup-panel {
+  display: grid;
+  gap: 9px;
+  margin-top: 10px;
+  padding: 12px;
+  border: 1px solid #baff0040;
+  border-radius: 16px;
+  background: #0e150d;
+}
+
+.phone.custom .weekly-setup-panel p {
+  margin: 0;
+  color: #d2dccb;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.phone.custom .weekly-setup-panel fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 5px 9px;
+  border: 1px solid #ffffff24;
+  border-radius: 10px;
+  color: #f3f7ef;
+}
+
+.phone.custom .weekly-setup-panel legend {
+  padding: 0 5px;
+  color: #c7ff61;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.phone.custom .weekly-setup-panel label {
+  color: #e4eae0;
+  font-size: 11px;
+}
+
+.phone.custom .weekly-setup-panel input[type="checkbox"] {
+  accent-color: var(--lime);
+}
+
+.phone.custom .custom-builder-banner {
+  position: relative;
+  display: flex;
+  min-height: 190px;
+  align-items: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 18px;
+  border: 1px solid #baff0066;
+  border-radius: 21px;
+  background-color: #080d08;
+  background-image: linear-gradient(90deg, #050b05 0%, #071007f5 39%, #0710076b 67%, #07100718 100%), url('/assets/home-workout-hero.png');
+  background-position: center, center right;
+  background-size: cover;
+  box-shadow: 0 9px 24px #0004;
+}
+
+.phone.custom .custom-builder-banner::after {
+  position: absolute;
+  top: -28%;
+  right: 37%;
+  width: 76px;
+  height: 156%;
+  border-right: 2px solid #baff00b0;
+  border-radius: 50%;
+  content: "";
+  filter: drop-shadow(0 0 7px #baff0088);
+  pointer-events: none;
+}
+
+.phone.custom .custom-builder-banner > div {
+  position: relative;
+  z-index: 1;
+  width: min(72%, 285px);
+}
+
+.phone.custom .custom-builder-banner small {
+  color: var(--lime);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .035em;
+}
+
+.phone.custom .custom-builder-banner h2 {
+  margin: 7px 0 8px;
+  color: #fff;
+  font-size: clamp(21px, 6.4vw, 30px);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -.025em;
+}
+
+.phone.custom .custom-builder-banner p {
+  max-width: 255px;
+  margin: 0;
+  color: #e1e8dc;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.phone.custom .custom-quick-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  min-width: 0;
+}
+
+.phone.custom .custom-quick-actions > button {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr) 9px;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+  min-height: 75px;
+  padding: 8px 7px;
+  border: 1px solid #baff0050;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #182516, #0b110b);
+  color: #fff;
+  text-align: left;
+}
+
+.phone.custom .custom-quick-actions svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: var(--lime);
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.phone.custom .custom-quick-actions span {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.phone.custom .custom-quick-actions b {
+  color: #f5f8f2;
+  font-size: clamp(9px, 2.7vw, 11px);
+  line-height: 1.15;
+}
+
+.phone.custom .custom-quick-actions small {
+  color: #b9c4b3;
+  font-size: 8px;
+  line-height: 1.25;
+}
+
+.phone.custom .custom-quick-actions i {
+  color: #e7efe1;
+  font-size: 17px;
+  font-style: normal;
+}
+
+.phone.custom .custom-section-heading {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  scroll-margin-top: 20px;
+}
+
+.phone.custom .heading-dumbbell {
+  color: var(--lime);
+  font-size: 22px;
+  line-height: 1;
+}
+
+.phone.custom .custom-section-heading h2 {
+  margin: 0;
+  color: #f8fbf5;
+  font-size: clamp(15px, 4.4vw, 19px);
+  line-height: 1.2;
+}
+
+.phone.custom .custom-section-heading > button {
+  min-height: 33px;
+  padding: 5px 9px;
+  border: 1px solid #baff00a0;
+  border-radius: 18px;
+  background: #10180d;
+  color: var(--lime);
+  font-size: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.phone.custom .custom-section-heading > button b {
+  margin-left: 3px;
+  font-size: 15px;
+}
+
+.phone.custom .custom-category-list {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+}
+
+.phone.custom .custom-category-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) 27px;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  min-width: 0;
+  min-height: 70px;
+  overflow: hidden;
+  padding: 8px 10px;
+  border: 1px solid #8eae5860;
+  border-radius: 17px;
+  background: linear-gradient(110deg, #121b10, #0b100b 80%);
+  color: #fff;
+  text-align: left;
+  isolation: isolate;
+}
+
+.phone.custom .custom-category-card::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: linear-gradient(90deg, #101810 0%, #101810 42%, #101810d9 56%, #10181014 100%);
+  content: "";
+  pointer-events: none;
+}
+
+.phone.custom .custom-category-card::after {
+  position: absolute;
+  z-index: 1;
+  top: -35%;
+  right: 29%;
+  width: 55px;
+  height: 170%;
+  border-right: 2px solid #baff00a0;
+  border-radius: 50%;
+  content: "";
+  filter: drop-shadow(0 0 6px #baff0080);
+  pointer-events: none;
+}
+
+.phone.custom .custom-category-art {
+  position: absolute;
+  z-index: 0;
+  top: -28%;
+  right: 22px;
+  width: 42%;
+  height: 156%;
+  object-fit: contain;
+  object-position: center;
+  opacity: .96;
+  pointer-events: none;
+}
+
+.phone.custom .custom-category-icon,
+.phone.custom .custom-category-copy,
+.phone.custom .custom-category-arrow {
+  position: relative;
+  z-index: 2;
+}
+
+.phone.custom .custom-category-icon {
+  display: grid;
+  width: 44px;
+  height: 50px;
+  place-items: center;
+  border: 1px solid #baff0023;
+  border-radius: 14px;
+  background: radial-gradient(circle, #1b2b14, #080d08 74%);
+  color: var(--lime);
+}
+
+.phone.custom .muscle-line-icon {
+  width: 35px;
+  height: 43px;
+  filter: drop-shadow(0 0 4px #baff003b);
+}
+
+.phone.custom .custom-category-copy {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.phone.custom .custom-category-copy b {
+  overflow: hidden;
+  color: #f8fbf5;
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.phone.custom .custom-category-copy small {
+  color: #c3cec0;
+  font-size: 10px;
+}
+
+.phone.custom .custom-category-arrow {
+  display: grid;
+  width: 25px;
+  height: 25px;
+  place-items: center;
+  border: 1px solid var(--lime);
+  border-radius: 50%;
+  background: #081008bb;
+  color: var(--lime);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.phone.custom .exercise-promo-banner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr) 48px;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
+  min-height: 108px;
+  overflow: hidden;
+  margin-top: 2px;
+  padding: 10px;
+  border: 1px solid #baff0066;
+  border-radius: 18px;
+  background-color: #0c130c;
+  background-image: linear-gradient(90deg, #0b130be8 0%, #0b130bd9 46%, #0b130b40 100%), url('/assets/custom-dumbbells.png');
+  background-position: center, center right;
+  background-size: cover;
+  color: #fff;
+  text-align: left;
+}
+
+.phone.custom .promo-laurel {
+  position: relative;
+  display: grid;
+  min-height: 82px;
+  align-content: center;
+  justify-items: center;
+  color: var(--lime);
+}
+
+.phone.custom .promo-laurel svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 5px #baff0050);
+}
+
+.phone.custom .promo-laurel b {
+  position: relative;
+  z-index: 1;
+  font-size: 25px;
+  line-height: 1;
+}
+
+.phone.custom .promo-laurel small {
+  position: relative;
+  z-index: 1;
+  color: #eff8e8;
+  font-size: 9px;
+}
+
+.phone.custom .promo-copy {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+
+.phone.custom .promo-copy b {
+  color: #fff;
+  font-size: clamp(12px, 3.8vw, 15px);
+  line-height: 1.2;
+}
+
+.phone.custom .promo-copy small {
+  color: #d4ddd0;
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+.phone.custom .promo-play {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--lime);
+  color: #10140b;
+  font-size: 16px;
+  box-shadow: 0 0 0 6px #baff001c, 0 0 17px #baff0066;
+}
+
+.phone.custom .custom-managed-plans {
+  display: grid;
+  gap: 4px;
+  scroll-margin-top: 18px;
+}
+
+.phone.custom .custom-managed-plans h2 {
+  margin: 5px 0 2px;
+  color: #f5f8f2;
+  font-size: 15px;
+}
+
+.phone.custom .custom-managed-plans .row {
+  min-height: 56px;
+  padding: 8px 5px;
+  border-bottom: 1px solid #ffffff24;
+  background: transparent;
+  color: #f4f8f0;
+  text-align: left;
+}
+
+.phone.custom .custom-managed-plans .row small {
+  color: #bfccb9;
+}
+
+.phone.custom :is(.custom-quick-actions button, .custom-category-card, .exercise-promo-banner):focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 3px;
+}
+
+@media (max-width: 390px) {
+  .phone.custom .custom-hero-header {
+    grid-template-columns: 58px minmax(0, 1fr) 42px;
+    gap: 8px;
+  }
+
+  .phone.custom .custom-hero-header > .logo,
+  .phone.custom .custom-hero-header > .logo img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .phone.custom .custom-builder-banner {
+    min-height: 174px;
+    padding: 13px;
+  }
+
+  .phone.custom .custom-builder-banner > div {
+    width: 75%;
+  }
+
+  .phone.custom .custom-builder-banner h2 {
+    font-size: clamp(19px, 6vw, 24px);
+  }
+
+  .phone.custom .custom-category-card {
+    grid-template-columns: 42px minmax(0, 1fr) 25px;
+    gap: 7px;
+    min-height: 66px;
+    padding: 7px;
+  }
+
+  .phone.custom .custom-category-icon {
+    width: 39px;
+    height: 46px;
+  }
+
+  .phone.custom .muscle-line-icon {
+    width: 32px;
+    height: 39px;
+  }
+
+  .phone.custom .custom-category-art {
+    right: 20px;
+    width: 40%;
+  }
+
+  .phone.custom .custom-category-copy b {
+    font-size: 11px;
+  }
+
+  .phone.custom .custom-category-copy small {
+    font-size: 9px;
+  }
+
+  .phone.custom .exercise-promo-banner {
+    grid-template-columns: 68px minmax(0, 1fr) 40px;
+    gap: 7px;
+    min-height: 96px;
+    padding: 8px;
+  }
+
+  .phone.custom .promo-play {
+    width: 36px;
+    height: 36px;
+  }
+}
+
 /* Match the reference's denser mobile proportions so the lower cards sit above nav. */
 .phone.home .home-screen {
   gap: 11px;
