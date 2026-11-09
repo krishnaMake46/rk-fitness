@@ -2818,3 +2818,39 @@ body {
 @media(prefers-reduced-motion:reduce) {
  .app nav.rk-bottom-nav .nav-icon { transition:none; }
 }
+
+/* Compact weekly planner sizing for narrow phones */
+@media(max-width:600px) {
+ .phone.custom .weekly-setup-screen { padding:9px 10px calc(16px + env(safe-area-inset-bottom)); }
+ .phone.custom .weekly-premium-header { min-height:58px;gap:6px;margin-bottom:8px;padding:2px 0 7px; }
+ .phone.custom .weekly-back { width:32px;height:32px;flex-basis:32px;font-size:24px; }
+ .phone.custom .weekly-premium-header>.logo { width:48px;height:44px;flex-basis:48px;padding-right:5px; }
+ .phone.custom .weekly-premium-header>.logo img { max-height:41px; }
+ .phone.custom .weekly-premium-header h1 { font-size:clamp(16px,4.4vw,20px);line-height:1.05; }
+ .phone.custom .weekly-premium-header p { margin-top:3px;font-size:9px; }
+ .phone.custom .weekly-hero { min-height:145px;margin-bottom:8px;padding:11px;border-radius:15px; }
+ .phone.custom .weekly-hero-copy { width:70%; }
+ .phone.custom .weekly-hero-copy>svg { width:25px;height:25px; }
+ .phone.custom .weekly-hero-copy h2 { margin:4px 0 5px;font-size:clamp(20px,5.5vw,25px);line-height:1.02; }
+ .phone.custom .weekly-hero-copy p { max-width:245px;font-size:9px;line-height:1.25; }
+ .phone.custom .weekly-day-list { gap:6px; }
+ .phone.custom .weekly-day-card { grid-template-columns:46px minmax(0,1fr) 64px;gap:4px;min-height:78px;padding:5px;border-radius:14px; }
+ .phone.custom .weekly-day-badge { height:62px;gap:2px;border-radius:10px; }
+ .phone.custom .weekly-day-badge svg { width:17px;height:17px; }
+ .phone.custom .weekly-day-badge b { font-size:12px; }
+ .phone.custom .weekly-options { gap:4px;padding:2px 1px; }
+ .phone.custom .weekly-option { width:62px;height:62px;flex-basis:62px;gap:1px;border-radius:10px; }
+ .phone.custom .weekly-option .muscle-line-icon { width:24px;height:27px; }
+ .phone.custom .weekly-option span { font-size:9px; }
+ .phone.custom .weekly-option i { width:14px;height:14px;top:3px;right:3px;font-size:9px; }
+ .phone.custom .weekly-day-count { height:50px;gap:2px; }
+ .phone.custom .weekly-day-count svg { width:20px;height:20px; }
+ .phone.custom .weekly-day-count b { font-size:9px; }
+ .phone.custom .weekly-day-count .rest-icon { font-size:19px; }
+ .phone.custom .weekly-summary { margin:9px 1px;padding:7px 2px;border-radius:13px; }
+ .phone.custom .weekly-summary>div { min-height:47px;gap:3px; }
+ .phone.custom .weekly-summary svg { width:20px;height:20px; }
+ .phone.custom .weekly-summary b { font-size:8px; }
+ .phone.custom .weekly-save { min-height:49px;border-radius:13px;font-size:13px;gap:8px; }
+ .phone.custom .weekly-save span { font-size:21px; }
+}
