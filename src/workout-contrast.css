@@ -8,3 +8,7 @@
 .phone.workout .modal>div{background:#10190e;color:#fff;border:1px solid #91b968}
 .phone.workout .modal p{color:#c4d4ba}
 .phone.workout .outline{background:#172113;color:#fff;border-color:#718666}
+.phone.workout .modal p,.phone.workout .modal li{color:#d7e2d0;font-size:14px;line-height:1.55}
+.phone.workout .modal h2{color:#fff;font-size:21px}
+.exercise-video{display:block;width:100%;max-height:42vh;object-fit:contain;background:#050605;border:1px solid #ffffff20;border-radius:12px;margin:12px 0}
+.logo img{display:block;width:112px;height:75px;object-fit:contain;object-position:left center}
