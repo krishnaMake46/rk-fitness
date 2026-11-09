@@ -434,6 +434,98 @@ body {
   color: #fff;
 }
 
+/* Keep the workout name readable while preserving the dark workout editor. */
+.phone.customedit .field input {
+  min-height: 52px;
+  border: 1px solid #d6ddd1;
+  background: #f3f6f1;
+  color: #111510;
+  caret-color: #111510;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.phone.customedit .field {
+  color: #f5f8f2;
+}
+
+.phone.custom .customrow {
+  min-height: 68px;
+  margin: 8px 0;
+  padding: 13px 14px;
+  border: 1px solid #d8dfd3;
+  border-radius: 14px;
+  background: #f1f4ef;
+  color: #10140f;
+}
+
+.phone.custom .customrow b {
+  color: #10140f;
+  font-size: 15px;
+}
+
+.phone.custom .customrow small {
+  color: #4f584b;
+  font-size: 12px;
+}
+
+.phone.custom .customrow > :last-child {
+  color: #10140f;
+}
+
+.phone.settings .update-app-button {
+  min-height: 58px;
+  margin: 8px 0;
+  padding: 15px 14px;
+  border: 1px solid #baff0055;
+  border-radius: 14px;
+  background: #111811;
+  color: #f5f8f2;
+  font-size: 15px;
+}
+
+.phone.settings .update-app-button b {
+  color: var(--lime);
+  font-size: 20px;
+}
+
+.phone.settings .update-app-button:disabled {
+  opacity: 0.75;
+}
+
+.phone.settings .update-app-message {
+  padding: 0 8px;
+  color: #d6e0d1;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+@media (max-width: 699px) {
+  .phone.customedit {
+    padding-bottom: calc(120px + env(safe-area-inset-bottom));
+  }
+
+  .phone.customedit .edit-actions {
+    padding-bottom: calc(14px + env(safe-area-inset-bottom));
+  }
+
+  .phone.customedit .bottom-save {
+    position: sticky !important;
+    bottom: calc(10px + env(safe-area-inset-bottom));
+    left: auto;
+    z-index: 6;
+    display: block;
+    width: 100% !important;
+    min-height: 56px;
+    margin: 14px 0 0;
+    padding: 15px 18px !important;
+    transform: none;
+    border-radius: 15px !important;
+    color: #10140b;
+    box-shadow: 0 8px 25px #0007;
+  }
+}
+
 @media (max-width: 380px) {
   .phone.otp .auth {
     padding-right: 0;
