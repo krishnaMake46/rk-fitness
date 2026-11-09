@@ -1,0 +1,224 @@
+:root {
+  --lime: #d1ff19;
+  --ink: #15171a;
+  --muted: #a3adaf;
+  --line: #343f44;
+  --soft: #252a2d;
+  --rk-bg: #15171a;
+  --rk-surface: #1d2124;
+  --rk-raised: #252a2d;
+  --rk-text: #f1f4f3;
+  --rk-muted: #a3adaf;
+  --rk-subtle: #738a94;
+  --rk-teal: #009c7e;
+  --rk-danger: #f05230;
+  --rk-radius-sm: 6px;
+  --rk-radius: 10px;
+  --rk-radius-lg: 16px;
+  --rk-space: 4px;
+  --rk-font: Inter, InterVariable, ui-sans-serif, system-ui, sans-serif;
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+body {
+  color: var(--rk-text);
+  background: var(--rk-bg);
+  font-family: var(--rk-font);
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+button, input { font-family: inherit; }
+button { font-size: 14px; }
+.app { background: var(--rk-bg); }
+.phone {
+  color: var(--rk-text);
+  background: var(--rk-bg);
+  padding-top: max(20px, env(safe-area-inset-top));
+}
+.phone.welcome { color: var(--rk-text); background: var(--rk-bg); background-image: none !important; }
+.phone.welcome .logo span { color: var(--rk-text); }
+.phone.welcome em { color: var(--rk-lime); }
+.phone.welcome > button:not(.lime) { color: var(--rk-muted); }
+.phone.splash { color: var(--rk-text); }
+.phone.auth, .phone.onboard, .phone.pending { color: var(--rk-text); background: var(--rk-bg); }
+.phone.auth .top, .phone.onboard .top, .phone.pending .top { color: var(--rk-text); }
+.phone.auth .top button, .phone.pending .top button { color: var(--rk-text); }
+.phone.auth h1, .phone.onboard h1, .phone.pending h1 { color: var(--rk-text); }
+.phone.auth .field, .phone.onboard .field { color: var(--rk-muted); }
+.phone.pending > div { border: 1px solid var(--rk-line); border-radius: var(--rk-radius-lg); padding: 22px; background: var(--rk-surface); }
+.phone.pending > div > i { color: var(--rk-lime); }
+.phone section:not(.splash):not(.welcome) { font-size: 14px; }
+.phone h1 { font-size: 25px; line-height: 1.16; letter-spacing: -.6px; }
+.phone h2 { font-size: 19px; line-height: 1.25; letter-spacing: -.25px; }
+.phone h3 { font-size: 14px; line-height: 1.35; letter-spacing: .15px; }
+.phone p { line-height: 1.55; }
+
+/* Shared chrome */
+.top {
+  height: 44px;
+  margin-bottom: 18px;
+  grid-template-columns: 44px minmax(0, 1fr) 64px;
+  color: var(--rk-text);
+}
+.top b { font-size: 15px; font-weight: 700; letter-spacing: -.2px; }
+.top button { min-width: 44px; min-height: 44px; color: var(--rk-text); }
+.logo { gap: 8px; font-style: normal; }
+.logo > b {
+  display: grid; place-items: center; width: 36px; height: 36px;
+  border: 1px solid var(--rk-lime); border-radius: 10px;
+  background: var(--rk-lime); color: #15171a; text-shadow: none;
+  font-size: 15px; letter-spacing: -.8px;
+}
+.logo span { color: var(--rk-text); font-size: 14px; letter-spacing: .4px; }
+.logo small { margin-top: 1px; color: var(--rk-muted); font-size: 8px; letter-spacing: 1px; }
+.wide { min-height: 48px; border-radius: var(--rk-radius); padding: 13px 16px; font-size: 13px; letter-spacing: .25px; }
+.lime { background: var(--rk-lime); color: #15171a; box-shadow: none; }
+.dark { background: var(--rk-raised); color: var(--rk-text); }
+.outline { color: var(--rk-text); background: transparent; border: 1px solid var(--rk-line); }
+.field { color: var(--rk-muted); font-size: 12px; }
+.field input, .otp {
+  min-height: 46px; color: var(--rk-text); background: var(--rk-surface);
+  border: 1px solid var(--rk-line); border-radius: var(--rk-radius-sm);
+  font-size: 14px;
+}
+.link { color: var(--rk-lime); font-size: 13px; }
+.error { color: #ff8d78; }
+
+/* Home, plan, profile, and library surfaces */
+.phone.home, .phone.custom, .phone.me, .phone.plan, .phone.customedit,
+.phone.workout, .phone.complete {
+  color: var(--rk-text);
+  background: var(--rk-bg);
+}
+.phone.home .logo span, .phone.home .logo > b { color: inherit; text-shadow: none; }
+.phone.home .logo > b { color: #15171a; }
+.phone.home .muted, .phone.custom p, .phone.me .profile p,
+.phone.home .call small { color: var(--rk-muted); }
+.phone.home .streak, .phone.home .call, .phone.custom .custom,
+.phone.custom .row, .phone.me .profile, .phone.me .menu {
+  color: var(--rk-text); background: var(--rk-surface); border: 1px solid var(--rk-line);
+}
+.phone.home .streak { border-left: 3px solid var(--rk-lime); }
+.phone.home .categories button { color: var(--rk-text); background: var(--rk-surface); border-color: var(--rk-line); font-size: 11px; }
+.phone.home .categories i { color: var(--rk-lime); background: var(--rk-raised); }
+.today, .cover { border: 1px solid var(--rk-line); border-radius: var(--rk-radius); }
+.today { min-height: 142px; }
+.today b { font-size: 20px; }
+.call { min-height: 64px; border-radius: var(--rk-radius); }
+.call img, .row img, .select img { border-radius: var(--rk-radius-sm); }
+.row, .select, .menu { min-height: 56px; color: var(--rk-text); border-color: var(--rk-line); font-size: 13px; }
+.row small, .select small, .menu small { color: var(--rk-muted); font-size: 11px; }
+.phone.me .menu { margin: 6px 0; padding: 14px; border-radius: var(--rk-radius); }
+.phone.me .menu b { color: var(--rk-lime); }
+.profile { color: var(--rk-text); background: var(--rk-surface); border: 1px solid var(--rk-line); border-radius: var(--rk-radius-lg); }
+.profile aside { justify-content: space-around; gap: 8px; }
+.profile aside b { color: var(--rk-lime); font-size: 18px; }
+.profile aside small { color: var(--rk-muted); font-size: 10px; }
+.cover { padding: 20px; }
+.cover h1 { font-size: 24px; }
+.search, .exercise-search { min-height: 46px; color: var(--rk-text); background: var(--rk-surface); border: 1px solid var(--rk-line); border-radius: var(--rk-radius); }
+.search input, .exercise-search input { color: var(--rk-text); font-size: 13px; }
+.chips button, .exercise-filter button, .record-filters button {
+  min-height: 36px; padding: 8px 12px; border: 1px solid var(--rk-line);
+  border-radius: var(--rk-radius-sm); color: var(--rk-muted); background: var(--rk-surface); font-size: 11px;
+}
+.chips button:first-child, .exercise-filter .active, .record-filters .on {
+  color: #15171a; background: var(--rk-lime); border-color: var(--rk-lime); box-shadow: none;
+}
+.video, .exercise-demo { border-radius: var(--rk-radius-lg); border-color: var(--rk-line); }
+.tabs, .seg, .sheet-tabs, .sub-tabs { border-color: var(--rk-line); }
+.tabs button, .seg button, .sheet-tabs button, .sub-tabs button { min-height: 44px; color: var(--rk-muted); font-size: 12px; }
+.tabs .on, .seg .on, .sheet-tabs .on, .sub-tabs .on { color: var(--rk-lime); }
+.selected { color: var(--rk-text) !important; background: #29321a !important; border-color: var(--rk-lime) !important; }
+
+/* Workout logging */
+.phone.workout .timer { border-radius: var(--rk-radius); background: var(--rk-surface); border-color: var(--rk-line); }
+.phone.workout .timer small, .phone.workout .head { color: var(--rk-muted); font-size: 10px; letter-spacing: .5px; }
+.phone.workout .timer b { color: var(--rk-lime); font-size: 30px; }
+.phone.workout .active { min-height: 76px; }
+.phone.workout .active img { width: 68px; height: 60px; border-radius: var(--rk-radius); }
+.phone.workout .active b { font-size: 15px; }
+.phone.workout .active small { color: var(--rk-muted); font-size: 11px; }
+.phone.workout .set { min-height: 60px; border-color: var(--rk-line); }
+.phone.workout .set input { border-radius: var(--rk-radius-sm); }
+.phone.workout .set.done { background: #253019; }
+.phone.workout .add { color: var(--rk-text); background: var(--rk-surface); border: 1px solid var(--rk-line); border-radius: var(--rk-radius); font-size: 13px; }
+.phone.workout .dark.wide { border-radius: var(--rk-radius); }
+.finish { min-height: 40px; padding: 8px 12px; border: 1px solid var(--rk-line); border-radius: var(--rk-radius-sm); color: var(--rk-text); background: var(--rk-surface); font-size: 12px; }
+.modal { padding-top: env(safe-area-inset-top); }
+.modal > div, .modal form { color: var(--rk-text); background: var(--rk-surface); border: 1px solid var(--rk-line); border-radius: var(--rk-radius-lg) var(--rk-radius-lg) 0 0; }
+.modal p, .modal li { color: var(--rk-muted); font-size: 13px; line-height: 1.55; }
+.modal h2 { color: var(--rk-text); }
+
+/* Exercise, records, analytics, and progression */
+.exercise-library, .exercise-sheet, .rpg {
+  color: var(--rk-text); background: var(--rk-bg); border-top: 1px solid var(--rk-line);
+}
+.exercise-library .top, .exercise-sheet .top, .rpg .top { color: var(--rk-text); border-color: var(--rk-line); }
+.exercise-banner { border: 1px solid var(--rk-line); border-radius: var(--rk-radius); box-shadow: none; }
+.exercise-card { min-height: 70px; border-color: var(--rk-line); font-size: 13px; }
+.exercise-card img { border: 0; border-radius: var(--rk-radius-sm); }
+.exercise-card b { font-size: 13px; }
+.exercise-card small, .exercise-card em { font-size: 11px; }
+.exercise-demo { height: 210px; }
+.instruction-content { padding-bottom: 90px; }
+.instruction-content h3 { font-size: 14px; }
+.instruction-content p, .instruction-content li { color: var(--rk-muted); font-size: 13px; line-height: 1.6; }
+.focus-pill, .equipment-pill { color: var(--rk-lime) !important; border-color: var(--rk-line); border-radius: var(--rk-radius-sm); background: var(--rk-surface); }
+.body-focus { border-color: var(--rk-line); border-radius: var(--rk-radius); background: var(--rk-surface); }
+.body-focus span { color: var(--rk-muted); font-size: 12px; }
+.done-button { border-radius: var(--rk-radius) var(--rk-radius) 0 0 !important; }
+.exercise-record, .rpg-actions button, .rpg-filters button, .rpg-tabs button,
+.rank-stack button, .next-rank, .rpg-achievement, .overall-stats article,
+.history-stat-grid article, .rpg-chart, .achievement-overview, .rank-hero,
+.progress-hero {
+  color: var(--rk-text); background: var(--rk-surface); border: 1px solid var(--rk-line); box-shadow: none;
+}
+.rpg h3 { color: var(--rk-text); font-size: 14px; }
+.rpg-actions button, .rpg-filters button, .rpg-tabs button { min-height: 40px; border-radius: var(--rk-radius-sm); font-size: 11px; }
+.rpg-filters .on, .rpg-tabs .on { color: #15171a; background: var(--rk-lime); border-color: var(--rk-lime); box-shadow: none; }
+.achievement-overview, .rank-hero, .progress-hero { border-radius: var(--rk-radius); }
+.completion-ring { box-shadow: none; }
+.rpg-achievement { min-height: 145px; border-radius: var(--rk-radius); }
+.rpg-achievement.unlocked { border-color: #809d31; }
+.rpg-achievement small, .rpg-achievement em, .rank-stack small,
+.rank-hero p, .progress-hero small, .history-stat-grid small, .overall-stats small { color: var(--rk-muted); font-size: 10px; }
+.overall-stats b, .history-stat-grid b, .rpg-achievement em, .rank-stack em { color: var(--rk-lime); }
+.rank-stack button { min-height: 60px; border-radius: var(--rk-radius); }
+.rank-stack button.selected { border-color: var(--rk-lime); background: #29321a !important; }
+.rank-levels i, .level-grid button { border-radius: var(--rk-radius-sm); }
+.history-row { min-height: 68px; border-color: var(--rk-line); color: var(--rk-text); }
+.history-row b { font-size: 13px; }
+.history-row small, .history-row em { color: var(--rk-muted); font-size: 11px; }
+.record-empty p, .record-empty h2 { color: var(--rk-muted); font-size: 13px; }
+.empty { color: var(--rk-muted); font-size: 13px; }
+
+/* Navigation and onboarding */
+.app nav {
+  min-height: 64px; padding-top: 8px; padding-bottom: calc(8px + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--rk-line); background: #191c1f; color: var(--rk-muted);
+}
+.app nav button { min-width: 54px; min-height: 48px; color: var(--rk-muted); font-size: 10px; }
+.app nav i { font-size: 18px; }
+.app nav .on { color: var(--rk-lime); }
+.progress { height: 5px; background: var(--rk-raised); }
+.progress i { background: var(--rk-lime); }
+.onboard > small { color: var(--rk-muted); font-size: 11px; }
+.onboard p, .welcome p, .auth > p { color: var(--rk-muted); font-size: 13px; }
+.choices { gap: 8px; }
+.choices button, .multi button { min-height: 48px; border-color: var(--rk-line); border-radius: var(--rk-radius); color: var(--rk-text); background: var(--rk-surface); font-size: 13px; }
+.choices small { color: var(--rk-muted); font-size: 11px; }
+.phone ul { color: var(--rk-lime); font-size: 13px; }
+.toast { color: var(--rk-text); background: var(--rk-surface); border: 1px solid var(--rk-line); font-size: 12px; }
+
+@media (min-width: 700px) {
+  .phone { max-width: 560px; background: var(--rk-bg); }
+  .app nav { width: min(100%, 560px); }
+}
+
+@media (max-width: 360px) {
+  .phone { padding-left: max(14px, env(safe-area-inset-left)); padding-right: max(14px, env(safe-area-inset-right)); }
+  .app nav button { min-width: 48px; }
+  .history-stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
