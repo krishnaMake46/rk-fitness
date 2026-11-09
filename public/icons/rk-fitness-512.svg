@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <rect width="512" height="512" rx="112" fill="#121411"/>
-  <circle cx="256" cy="256" r="187" fill="none" stroke="#baff00" stroke-width="22"/>
-  <path d="M112 309h48l24-107h40l-19 72h51l45-72h48l-64 96 51 88h-51l-35-64h-70l-16 64h-52z" fill="#baff00"/>
-  <text x="256" y="442" fill="#fff" font-family="Arial, sans-serif" font-size="45" font-weight="800" text-anchor="middle">FITNESS</text>
+  <circle cx="256" cy="256" r="201" fill="none" stroke="#baff00" stroke-width="18"/>
+  <path d="M118 174h24v70q20-28 50-28 34 0 34 37v76h-25v-69q0-22-20-22-22 0-39 26v65h-24zm186 44v23q-21-11-42-11-19 0-19 11 0 9 22 15l18 6q34 11 34 34 0 36-53 36-29 0-51-12v-25q25 14 51 14 28 0 28-14 0-8-20-14l-20-6q-34-11-34-34 0-34 49-34 23 0 37 11z" fill="#baff00"/>
+  <text x="256" y="410" fill="#fff" font-family="Arial, sans-serif" font-size="43" font-weight="800" letter-spacing="6" text-anchor="middle">FITNESS</text>
 </svg>

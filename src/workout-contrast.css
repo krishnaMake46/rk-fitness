@@ -1,0 +1,10 @@
+.phone.workout .timer{background:#182516;color:#f4ffe9;border:1px solid #baff0055}
+.phone.workout .timer b{color:#baff00;font-variant-numeric:tabular-nums}
+.phone.workout .timer small,.phone.workout .head{color:#c4d4ba}
+.phone.workout .set input{background:#182116;color:#fff;border:1px solid #526449}
+.phone.workout .set.done{background:#243b15;color:#fff}
+.phone.workout .set button{color:#baff00;min-width:44px;min-height:44px}
+.phone.workout .add{background:#1b2917;color:#f1ffe6}
+.phone.workout .modal>div{background:#10190e;color:#fff;border:1px solid #91b968}
+.phone.workout .modal p{color:#c4d4ba}
+.phone.workout .outline{background:#172113;color:#fff;border-color:#718666}
