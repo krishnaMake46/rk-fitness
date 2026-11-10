@@ -2915,3 +2915,31 @@ body {
   font-style: normal;
   font-weight: 800;
 }
+.phone.customedit .edit-workout-picker {
+  display: grid;
+  gap: 7px;
+  margin: 0 0 14px;
+  color: #dce8d3;
+  font-size: 12px;
+  font-weight: 700;
+}
+.phone.customedit .edit-workout-picker select {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 38px 0 14px;
+  border: 1px solid #b7ff0066;
+  border-radius: 13px;
+  appearance: none;
+  color: #f4f8ef;
+  background: #10170f;
+  font: inherit;
+  font-size: 14px;
+}
+.phone.customedit .edit-workout-picker select:focus-visible {
+  outline: 2px solid #b7ff00;
+  outline-offset: 2px;
+}
+.phone.customedit .edit-workout-picker option {
+  color: #f4f8ef;
+  background: #10170f;
+}
