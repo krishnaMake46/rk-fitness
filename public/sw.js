@@ -1,10 +1,18 @@
-const CACHE='rk-fitness-shell-v5';
+const CACHE='rk-fitness-shell-v6';
 const SHELL=['/','/manifest.webmanifest','/icons/rk-fitness-app-192-v2.png','/icons/rk-fitness-app-512-v2.png'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('rk-fitness-shell-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{
   const request=event.request;
   if(request.method!=='GET'||new URL(request.url).origin!==self.location.origin)return;
+  const pathname=new URL(request.url).pathname;
+  const isVideo=/\.(mp4|webm|mov|m4v)$/i.test(pathname);
+  // Video players use HTTP Range requests for seeking and streaming. Never send
+  // partial 206 responses through Cache Storage; let the browser/server stream them.
+  if(isVideo||request.headers.has('range')){
+    event.respondWith(fetch(request));
+    return;
+  }
   event.respondWith((async()=>{
     try{
       const response=await fetch(request);
