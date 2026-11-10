@@ -2887,3 +2887,31 @@ body {
 @media(max-width:390px){.rank-progression,.badge-gallery{padding-left:11px;padding-right:11px}.rank-showcase{grid-template-columns:70px minmax(0,1fr) 14px;gap:8px;padding:11px}.rank-showcase-emblem{width:64px}.rank-current-card{grid-template-columns:88px minmax(0,1fr);gap:7px;padding:12px 9px}.rank-current-art{min-height:96px}.rank-current-art>.rank-emblem{width:80px}.rank-energy-ring{width:85px;height:85px}.rank-current-copy h2{font-size:21px}.rank-list-card{grid-template-columns:39px minmax(0,1fr) auto;gap:6px;padding:6px}.rank-list-card .rank-emblem.small{width:35px}.rank-list-card>span b{font-size:10px}.rank-list-card em{font-size:7px}.badge-gallery-grid{gap:7px}.badge-tile{min-height:103px}}
 @media(min-width:700px){.rank-progression,.badge-gallery{padding:26px 28px 42px}.rank-page-header{grid-template-columns:44px 72px minmax(0,1fr) 42px;gap:12px}.rank-page-header .logo img{width:68px;height:58px}.rank-current-card{grid-template-columns:150px minmax(0,1fr);padding:22px}.rank-current-art{min-height:150px}.rank-current-art>.rank-emblem{width:128px}.rank-energy-ring{width:136px;height:136px}.rank-level-selector button{height:38px}.rank-stack{grid-template-columns:repeat(2,minmax(0,1fr))}.badge-gallery-grid{grid-template-columns:repeat(5,minmax(0,1fr))}.rank-showcase{max-width:780px}}
 @media(prefers-reduced-motion:reduce){.rank-showcase,.rank-aura,.rank-emblem,.rank-current-art>.rank-emblem,.rank-energy-ring,.rank-particle,.rank-unlock-rays{animation:none!important;transition:none!important}}
+
+/* Default workout editing and weekly-plan rest-day clarity */
+.phone.home .home-edit-default {
+  display: block;
+  margin: -9px 0 16px auto;
+  padding: 7px 12px;
+  border: 1px solid #b7ff0055;
+  border-radius: 999px;
+  background: #10180d;
+  color: #c6ff38;
+  font-size: 12px;
+  font-weight: 700;
+}
+.phone.home .home-edit-default:active { transform: scale(.97); }
+.phone.custom .custom-managed-plans .default-workout-row {
+  border-color: #b7ff0055;
+  background: linear-gradient(100deg, #17220f, #0a0e0a);
+}
+.phone.custom .custom-managed-plans .default-workout-row i {
+  margin-left: auto;
+  padding: 4px 7px;
+  border: 1px solid #b7ff0055;
+  border-radius: 999px;
+  color: #c6ff38;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 800;
+}
