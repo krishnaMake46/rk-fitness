@@ -3045,3 +3045,9 @@ body {
  .global-chat-emoji-picker button { width:36px;height:36px; }
  .global-chat-message { max-width:91%; }
 }
+
+/* Level-ranked member colors: the highest level leads in red; the rest get distinct hues. */
+.global-chat-member { color:var(--member-color,#b7ff00); }
+.global-chat-member>b { color:var(--member-color,#b7ff00); }
+.global-chat-avatar { border-color:color-mix(in srgb,var(--member-color,#b7ff00) 78%,transparent);box-shadow:0 0 9px color-mix(in srgb,var(--member-color,#b7ff00) 22%,transparent); }
+.global-chat-level { border-color:color-mix(in srgb,var(--member-color,#b7ff00) 35%,transparent);color:var(--member-color,#b7ff00); }
