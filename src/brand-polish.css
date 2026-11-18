@@ -3051,3 +3051,66 @@ body {
 .global-chat-member>b { color:var(--member-color,#b7ff00); }
 .global-chat-avatar { border-color:color-mix(in srgb,var(--member-color,#b7ff00) 78%,transparent);box-shadow:0 0 9px color-mix(in srgb,var(--member-color,#b7ff00) 22%,transparent); }
 .global-chat-level { border-color:color-mix(in srgb,var(--member-color,#b7ff00) 35%,transparent);color:var(--member-color,#b7ff00); }
+
+/* High-contrast signup, OTP and first-run setup screens */
+.phone.signup,.phone.login,.phone.forgot,.phone.onboard {
+  background:radial-gradient(ellipse at 50% 0%,#1e3018 0%,#0b110b 46%,#050705 100%);
+  color:#f6f8f2;
+}
+.phone.signup .auth,.phone.login .auth,.phone.forgot .auth {
+  min-height:calc(100dvh - 112px);padding:12px 4px 32px;color:#f6f8f2;
+}
+.phone.signup .auth h1,.phone.login .auth h1,.phone.forgot .auth h1,
+.phone.onboard h1 { color:#f7f9f3; }
+.phone.signup .auth>p,.phone.login .auth>p,.phone.forgot .auth>p,
+.phone.onboard p { color:#c0cbb8; }
+.phone.signup .auth .top,.phone.login .auth .top,.phone.forgot .auth .top { color:#f4f7f0; }
+.phone.signup .field,.phone.login .field,.phone.forgot .field,.phone.onboard .field { color:#eaf0e5; }
+.phone.signup .field input,.phone.login .field input,.phone.forgot .field input,
+.phone.onboard .field input {
+  min-height:48px;padding:12px 13px;border:1px solid #506047;border-radius:12px;
+  background:#10170f;color:#f6f8f2;caret-color:#baff00;outline:none;
+}
+.phone.signup .field input:focus,.phone.login .field input:focus,.phone.forgot .field input:focus,
+.phone.onboard .field input:focus { border-color:#baff00;box-shadow:0 0 0 3px #baff0020; }
+.phone.signup .field input::placeholder,.phone.login .field input::placeholder,
+.phone.forgot .field input::placeholder,.phone.onboard .field input::placeholder { color:#a3af9c; }
+.phone.signup .auth .link,.phone.login .auth .link,.phone.forgot .auth .link,
+.phone.otp .auth .link { color:#d1ff55; }
+.phone.signup .error,.phone.login .error,.phone.forgot .error,.phone.otp .error { color:#ff8585; }
+.auth-existing-login { display:block;width:100%;min-height:46px;margin:9px auto 0;border:1px solid #baff0080;border-radius:12px;background:#baff0010;color:#d5ff65;font-size:13px;font-weight:800; }
+.phone.signup .auth .lime,.phone.login .auth .lime,.phone.otp .auth .lime { color:#10150b; }
+.phone.onboard { display:flex;flex-direction:column;gap:12px;padding-top:calc(18px + env(safe-area-inset-top));padding-bottom:calc(28px + env(safe-area-inset-bottom)); }
+.onboard-header { display:flex;align-items:center;gap:12px;padding-bottom:14px;border-bottom:1px solid #baff002d;color:#d4ff61;font-size:10px;font-weight:900;letter-spacing:.12em; }
+.onboard-header .logo { width:52px;height:52px;border:1px solid #baff0066;box-shadow:0 0 15px #baff001c; }
+.onboard-header .logo img { width:100%;height:100%;object-fit:cover; }
+.onboard-step-copy { margin-top:10px; }
+.phone.onboard .progress { height:6px;margin:0 0 14px;overflow:hidden;border-radius:8px;background:#293326; }
+.phone.onboard .progress i { display:block;height:100%;border-radius:inherit;background:#baff00;box-shadow:0 0 12px #baff0080; }
+.phone.onboard .onboard-step-copy>small { color:#c9ff4d;font-size:10px;letter-spacing:.12em; }
+.phone.onboard .onboard-step-copy h1 { margin:8px 0 4px;font-size:26px; }
+.phone.onboard .onboard-step-copy p { margin:0;font-size:13px;line-height:1.55; }
+.phone.onboard .field { margin:12px 0 5px;font-size:12px;font-weight:750; }
+.phone.onboard .choices,.phone.onboard .multi { gap:10px;margin-top:12px; }
+.phone.onboard .choices button,.phone.onboard .multi button {
+  min-height:52px;border:1px solid #46543d;border-radius:13px;background:#101710;color:#f2f6ee;
+}
+.phone.onboard .choices button.selected,.phone.onboard .multi button.selected {
+  border-color:#baff00!important;background:linear-gradient(120deg,#c7ff39,#a5e900)!important;color:#10150b!important;
+  box-shadow:0 0 16px #baff0025;
+}
+.phone.onboard .choices button.selected small { color:#273315; }
+.phone.onboard .choices small { margin-top:4px;color:#aebaa6; }
+.phone.onboard .choices b { color:#11170b; }
+.onboard-actions { display:grid;grid-template-columns:78px minmax(0,1fr);align-items:center;gap:10px;margin-top:auto;padding-top:16px; }
+.onboard-actions .bottom { min-height:50px;margin:0; }
+.onboard-back { min-height:48px;border:1px solid #526044;border-radius:12px;color:#e5ecdf;font-weight:750; }
+.onboard-back:disabled { opacity:.38; }
+.phone.otp .otp-label { align-self:flex-start;margin-top:8px;color:#dbe5d4;font-size:12px;font-weight:800; }
+.phone.otp .otp { width:100%;min-height:58px;border-color:#56634b;background:#101710;color:#fff;caret-color:#baff00; }
+.phone.otp .auth-existing-login { margin-top:8px; }
+@media(max-width:380px) {
+ .phone.signup .auth,.phone.login .auth,.phone.forgot .auth { padding-right:0;padding-left:0; }
+ .phone.onboard { padding-left:14px;padding-right:14px; }
+ .phone.onboard .multi button { padding:12px 8px;font-size:10px; }
+}

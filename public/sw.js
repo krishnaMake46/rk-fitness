@@ -1,4 +1,4 @@
-const CACHE='rk-fitness-shell-v6';
+const CACHE='rk-fitness-shell-v7';
 const SHELL=['/','/manifest.webmanifest','/icons/rk-fitness-app-192-v2.png','/icons/rk-fitness-app-512-v2.png'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('rk-fitness-shell-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
